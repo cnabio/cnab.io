@@ -5,15 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Title -->
-  <!-- <title>
+  <title>
     {{- if not .IsHome }}
     {{- if eq .Kind "page" }}{{ .Title }}
     {{- else if eq .Data.Singular "tag" }}{{ .Data.Term }}
     {{- else }}Posts
     {{- end }} - {{ end }}
     {{- .Site.Title -}}
-  </title> -->
-  <title>CNAB</title>
+  </title>
   <!-- Meta -->
   {{- if eq .Kind "page" }}
   <meta name="description" content="{{ .Summary }}">
@@ -39,7 +38,7 @@
   {{ end }}
 </head>
 <body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">
-  <!-- <header class="header">
+  <header class="header">
     {{ if .IsHome }}
     <h1 class="title"><a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a></h1>
     {{ else }}
@@ -56,21 +55,5 @@
         {{ end }}
       </ul>
     </nav>
-  </header> -->
-  <header>
-    <p class="title"><a href="{{.Site.BaseURL}}">CNAB</a></p>
-
-    <button class="menu-toggle" type="button"></button>
-
-    <nav class="menu">
-        <ul>
-          {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
-          <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
-            <a href="{{ .URL }}">{{ .Name }}</a>
-          </li>
-          {{ end }}
-        </ul>
-      </nav>
   </header>
   <main class="main">
