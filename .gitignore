@@ -2,6 +2,9 @@
 /dist
 /tmp
 /out-tsc
+/out
+/.next
+/build
 
 # dependencies
 /node_modules
