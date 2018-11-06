@@ -1,1 +1,7 @@
-export default() => <div>osba.io</div>
+const Index = () => (
+  <div>
+    <p>CNAB</p>
+  </div>
+)
+
+export default Index

@@ -1,12 +1,16 @@
 {
+  "name": "cnab",
+  "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "npm run build && next export"
   },
   "dependencies": {
     "next": "^7.0.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "nextein": "^2.0.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
   }
 }

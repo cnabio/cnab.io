@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{202:function(n,e,t){__NEXT_REGISTER_PAGE("/",function(){return n.exports=t(203),{page:n.exports.default}})},203:function(n,e,t){"use strict";t.r(e);var u=t(8),r=t.n(u);e.default=function(){return r.a.createElement("div",null,r.a.createElement("p",null,"CNAB"))}}},[[202,1,0]]]);
