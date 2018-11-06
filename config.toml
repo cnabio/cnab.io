@@ -2,5 +2,4 @@ baseURL = "https://cnab.io/"
 languageCode = "en-us"
 title = "Cloud Native Application Bundle"
 
-theme = "base"
-themesDir = "themes"
+theme = "hugo-paper"
