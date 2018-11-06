@@ -1,4 +1,4 @@
 baseURL = "https://cnabio.netlify.com/"
 title = "Cloud Native Application Bundle"
-theme = "hugo-paper"
+theme = "cnab"
 languageCode = "en-us"

@@ -10,6 +10,8 @@ bower_components/
 vendor/
 public/**/*
 source/*
+static/*
+themes/cnab/static/css/*
 
 # Logs
 logs
