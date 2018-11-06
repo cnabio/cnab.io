@@ -11,7 +11,7 @@ vendor/
 public/**/*
 source/*
 static/*
-themes/cnab/static/css/*
+themes/cnab/static/css/styles.min*
 
 # Logs
 logs
