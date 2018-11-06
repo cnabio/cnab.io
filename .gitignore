@@ -2,11 +2,13 @@
 .sass-cache/
 _site/*
 _site/
+public/
 .ncurc.yml
 .publish/*
 node_modules/
 bower_components/
 vendor/
+public/**/*
 source/*
 
 # Logs
