@@ -1,0 +1,34 @@
+// load reset (normalize)
+@import "../../../../node_modules/foundation-sites/scss/vendor/normalize.scss";
+
+// load foundation
+@import "../../../../node_modules/foundation-sites/scss/foundation.scss";
+// @import "../../../../node_modules/foundation-sites/scss/foundation/components/grid.scss";
+// @import "../../../../node_modules/foundation-sites/scss/foundation/components/block-grid.scss";
+// //
+// @import "../../../../node_modules/foundation-sites/scss/foundation/components/buttons.scss";
+// //
+// @import "../../../../node_modules/foundation-sites/scss/foundation/components/inline-lists.scss";
+// @import "../../../../node_modules/foundation-sites/scss/foundation/components/top-bar.scss";
+// @import "../../../../node_modules/foundation-sites/scss/foundation/components/type.scss";
+// @import "../../../../node_modules/foundation-sites/scss/foundation/components/offcanvas.scss";
+// @import "../../../../node_modules/foundation-sites/scss/foundation/components/visibility.scss";
+//
+@import "paper.scss";
+
+
+// CNAB palette
+// core colors
+$navy:  #3731AA;
+$red: #E83683;
+$green: #2EC4B6;
+$yellow: #CCFF66;
+// accent colors
+$bluel: #D3DDF7;
+$yellowl: #FFF3E6;
+
+
+// hi
+body {
+  background: red !important;
+}
