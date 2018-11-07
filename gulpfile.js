@@ -54,7 +54,7 @@ gulp.task('clean', function () {
 
 
 // 'gulp' default task to build the site assets
-gulp.task('default', ['clean', 'styles', 'images']);
+gulp.task('default', ['styles', 'images']);
 
 // 'gulp watch' to watch for changes during dev
 gulp.task('watch', function () {
