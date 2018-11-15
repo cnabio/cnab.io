@@ -1,43 +1,86 @@
 {{ partial "header.html" . }}
-<article class="post post-view">
-  <header class="post-header">
-    <h1 class="post-title">
-      {{ .Title }}</h1>
-    <p class="post-meta">
-      {{- if or .Params.author .Site.Params.author -}}
-      {{ .Params.author | default .Site.Params.author }} · {{ end }}
-      {{- .Date.Format "2006.1.2" -}}
-    </p>
-  </header>
-  <div class="post-content">{{ .Content }}</div>
-  <footer class="post-footer">
-    {{ if .Params.tags }}
-    <ul class="post-tags">
-      {{ range .Params.tags }}
-      <li><a href="{{$.Site.BaseURL}}tags/{{ . | urlize }}/">{{ . }}</a></li>
-      {{ end }}
-    </ul>
-    {{ end }}
-  </footer>
-  <!-- Comments system area start -->
-  {{ if not (eq .Params.comments false) }}
-  {{ if .Site.DisqusShortname }}
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_shortname = '{{ .Site.DisqusShortname }}';
-    (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>
-    Please enable JavaScript to view the
-    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-  </noscript>
-  <!-- Comments system area end -->
-  {{ end }}
-  {{ end }}
-</article>
+
+    <div class="height-full" id="intro">
+      <div class="row row-full">
+        <div class="small-12 large-offset-2 large-8 end columns">
+          <h2>
+            <strong>A spec for packaging distributed apps.</strong>
+            <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+          </h2>
+          <p class="subhead">CNABs facilitate the bundling, installing and managing of container-native apps &mdash; and their coupled services.</p>
+
+          <div class="text-center">
+            <a class="button primary" href="https://github.com/deislabs/cnab-spec">View the spec</a>
+            <small><a href="#features">Scroll down for project info and resources.</a></small>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="height-full" id="features">
+        <!-- 
+        <div class="row row-full">
+          <div class="small-12 large-offset-2 large-8 end columns">
+            <h3 class="text-center">Features:</h3>
+          </div>
+        </div>
+      -->
+            
+      <div class="row row-full">
+        <div class="small-12 large-1 columns">&nbsp;</div>
+        <div class="small-12 large-5 columns">
+          <img src="{{.Site.BaseURL}}/img/feature-01.svg" alt="Cloud Agnostic" class="feature-01" class="right" />
+        </div>
+        <div class="small-12 large-5 columns">
+          <h3>Cloud Agnostic</h3>
+          <p class="lead">A CNAB can be composed to utilize whatever infra or services you require - there’s no vendor lock in.</p>
+        </div>
+        <div class="small-12 large-1 columns">&nbsp;</div>
+      </div>
+
+      <div class="row row-full">
+        <div class="small-12 large-1 columns">&nbsp;</div>
+        <div class="small-12 large-5 columns">
+          <h3>Deliverable Apps</h3>
+          <p class="lead">CNABs can be used to easily deliver apps across teams, organizations and marketplaces - even shared offline.</p></p>
+        </div>
+        <div class="small-12 large-5 columns">
+            <img src="{{.Site.BaseURL}}/img/feature-02.svg" alt="Deliverable Apps" class="feature-02" class="left" />
+          </div>
+        <div class="small-12 large-1 columns">&nbsp;</div>
+      </div>
+
+      <div class="row row-full">
+        <div class="small-12 large-1 columns">&nbsp;</div>
+        <div class="small-12 large-5 columns">
+          <img src="{{.Site.BaseURL}}/img/feature-03.svg" alt="Signed & Secure" class="feature-03" class="right" />
+        </div>
+        <div class="small-12 large-5 columns">
+          <h3>Signed &amp; Secure </h3>
+          <p class="lead">A CNAB can be cryptographically signed, attested, and verified​ to ensure a trustworthy source.</p>
+        </div>
+        <div class="small-12 large-1 columns">&nbsp;</div>
+      </div>
+
+      <div class="row row-full">
+        <div class="small-12 columns">
+          <p class="text-center bloglink lead"><a href="#">Read the announcement blog post for more. <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+        </div>
+      </div>
+    
+    </div> <!-- / features -->
+
+    <div class="row row-full" id="resources">
+      <div class="small-12 large-offset-2 large-8 end columns">
+        <h3 class="text-center">Resources:</h3>
+      </div>
+    </div>
+
+    <div class="row row-full" id="credits">
+      <div class="small-12 large-offset-2 large-8 end columns">
+        <h3 class="text-center">Brought to you by:</h3>
+      </div>
+    </div>
+
 {{ partial "footer.html" . }}

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
+  
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Title -->
-  <title>
-    {{- .Site.Title -}}
-  </title>
+  
+  <title>CNAB: Cloud Native Application Bundles</title>
+  
   <!-- Meta -->
   {{- if eq .Kind "page" }}
   <meta name="description" content="{{ .Summary }}">
@@ -16,17 +16,19 @@
   <meta name="description" content="{{ .Site.Params.description }}">
   <meta name="author" content="{{ .Site.Params.author }}">
   {{ end -}}
+  
   <!-- Styles -->
   <link href="{{.Site.BaseURL}}css/styles.min.css" rel="stylesheet">
   <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
-  <!-- Favicons -->
+  
+  <!-- Icons -->
   <link rel="icon" type="image/png" href="static/img/favicon.png">
   <link rel="apple-touch-icon" href="static/img/touch-icon-iphone-60x60.png">
   <link rel="apple-touch-icon" sizes="60x60" href="static/img/touch-icon-ipad-76x76.png">
   <link rel="apple-touch-icon" sizes="114x114" href="static/img/touch-icon-iphone-retina-120x120.png">
   <link rel="apple-touch-icon" sizes="144x144" href="static/img/touch-icon-ipad-retina-152x152.png">
-
   <link rel="icon" href="{{.Site.BaseURL}}img/favicon.ico">
+  
   <!-- Generator -->
   {{ .Hugo.Generator }}
   <!-- RSS -->
@@ -35,23 +37,33 @@
     {{ template "_internal/google_analytics_async.html" . }}
   {{ end }}
 </head>
+
 <body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">
-  <header class="header">
-    {{ if .IsHome }}
-    <h1 class="title"><a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a></h1>
-    {{ else }}
-    <p class="title"><a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a></p>
-    {{ end }}
-    <button class="menu-toggle" type="button"></button>
-    <nav class="menu">
-      <ul>
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-        <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
-        {{ end }}
-      </ul>
-    </nav>
-  </header>
-  <main class="main">
+  
+    <header class="header row row-full">
+      <div class="show-for-large-up large-1 columns"></div>
+      <div class="small-6 large-4 columns">
+        <h1 class=""><a href="{{.Site.BaseURL}}">
+          <img src="{{.Site.BaseURL}}/img/cnab-text.svg" class="logo" alt="Cloud Native Application Bundle" /> 
+        </a></h1>
+      </div>
+  
+      <!-- desktop menu-->
+      <nav class="large-4 columns end">
+        <ul class="inline-list right show-for-large-up menu-desktop">
+          {{ partial "nav.html" . }}
+        </ul>
+      </nav>
+      <div class="show-for-large-up large-1 columns"></div>
+      
+      <!-- mobile menu-->
+      <button class="menu-toggle hide-for-large-up columns" type="button"></button>
+      <nav class="menu">
+        <ul>
+          {{ partial "nav.html" . }}
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <main class="main height-full">

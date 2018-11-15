@@ -1,23 +1,28 @@
-// load reset (normalize)
-@import "../../../../node_modules/foundation-sites/scss/vendor/normalize.scss";
 
-// load foundation
-@import "../../../../node_modules/foundation-sites/scss/foundation.scss";
-// @import "../../../../node_modules/foundation-sites/scss/foundation/components/grid.scss";
-// @import "../../../../node_modules/foundation-sites/scss/foundation/components/block-grid.scss";
-// //
-// @import "../../../../node_modules/foundation-sites/scss/foundation/components/buttons.scss";
-// //
-// @import "../../../../node_modules/foundation-sites/scss/foundation/components/inline-lists.scss";
-// @import "../../../../node_modules/foundation-sites/scss/foundation/components/top-bar.scss";
-// @import "../../../../node_modules/foundation-sites/scss/foundation/components/type.scss";
-// @import "../../../../node_modules/foundation-sites/scss/foundation/components/offcanvas.scss";
-// @import "../../../../node_modules/foundation-sites/scss/foundation/components/visibility.scss";
-//
+// CNAB import style frameworks
+// ---------------------------------------
+
+$fa-font-path: "../fonts" !default;
+@import "../../../../node_modules/font-awesome/scss/font-awesome.scss";
 @import "paper.scss";
+@import "../../../../node_modules/foundation-sites/scss/normalize.scss";
+//
+// foundation (all)
+// @import "../../../../node_modules/foundation-sites/scss/foundation.scss";
+//
+// foundation (modular)
+@import "../../../../node_modules/foundation-sites/scss/foundation/components/grid.scss";
+@import "../../../../node_modules/foundation-sites/scss/foundation/components/block-grid.scss";
+// @import "../../../../node_modules/foundation-sites/scss/foundation/components/buttons.scss";
+@import "../../../../node_modules/foundation-sites/scss/foundation/components/inline-lists.scss";
+// @import "../../../../node_modules/foundation-sites/scss/foundation/components/top-bar.scss";
+@import "../../../../node_modules/foundation-sites/scss/foundation/components/type.scss";
+@import "../../../../node_modules/foundation-sites/scss/foundation/components/offcanvas.scss";
+@import "../../../../node_modules/foundation-sites/scss/foundation/components/visibility.scss";
 
 
 // CNAB palette
+// ---------------------------------------
 // core colors
 $navy:  #3731AA;
 $red: #E83683;
@@ -27,6 +32,405 @@ $yellow: #CCFF66;
 $bluel: #D3DDF7;
 $yellowl: #FFF3E6;
 
+
+// Fonts
+// ---------------------------------------
+@font-face {
+  font-family: 'work_sansregular';
+  src: url('../fonts/worksans-regular-webfont.eot');
+  src: url('../fonts/worksans-regular-webfont.eot?#iefix') format("embedded-opentype"),
+       url('../fonts/worksans-regular-webfont.woff') format('woff'),
+       url('../fonts/worksans-regular-webfont.ttf') format('truetype'),
+       url('../fonts/worksans-regular-webfont.svg#f310d4dccd89e059e79d3b6deebb4725') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'work_sanssemibold';
+  src: url('../fonts/worksans-semibold-webfont.woff2') format('woff2'),
+       url('../fonts/worksans-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: 600;
+  letter-spacing: 0.35rem;
+}
+
+$work: 'work_sansregular', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+$workbold: 'work_sanssemibold', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+
+
+// Mixins
+// ---------------------------------------
+@mixin transition($property:all, $duration:0.3s, $easing:ease-in-out) {
+  transition: $property $duration $easing;
+}
+
+@mixin border-radius($radius1:3px, $radius2:3px) {
+  -webkit-border-radius: $radius1 $radius2 $radius1 $radius2;
+  -moz-border-radius: $radius1 $radius2 $radius1 $radius2;
+  border-radius: $radius1 $radius2 $radius1 $radius2;
+}
+
+@mixin box-shadow($xlength:0, $ylength:2px, $size:0, $color:rgba(30,30,30,0.25)) {
+  -webkit-box-shadow: $xlength $ylength $size $color;
+  -moz-box-shadow: $xlength $ylength $size $color;
+  box-shadow: $xlength $ylength $size $color;
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin corner($corner: 0.5rem, $cornertop: -1rem, $cornerleft: -3rem, $cornerbottom: auto, $cornerright: auto) {
+  width: $corner;
+  height: ($corner * 4);
+  display: inline-block;
+  content: "";
+  background-color: $navy;
+  position: absolute;
+  left: $cornerleft;
+  top: $cornertop;
+  bottom: $cornerbottom;
+  right: $cornerright;
+}
+
+@mixin ripple($color: $navy) {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  @include transition;
+  
+  &::after {
+    position: absolute; 
+    bottom: -4px;
+    left: 45%;
+    width: 10%;
+    height: 4px;
+    display: inline-block;
+    content: "";
+    opacity: 0;
+    background-color: $color;
+    @include transition;
+  }
+
+  &:hover::after {
+    width: 100%;
+    opacity: 1;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@mixin wipe($color: $green) {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  @include transition;
+  
+  &::after {
+    position: absolute; 
+    left: -20%;
+    top: 125%;
+    width: 200%;
+    height: 150%;
+    display: inline-block;
+    background-blend-mode: overlay;
+    content: "";
+    opacity: 0;
+    background-color: $color;
+    transform: rotate(-15deg);
+    z-index: -10;
+    @include transition;
+  }
+
+  &:hover {
+    color: white;
+    background-color: transparent;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    top: 0%;
+    transform: rotate(0deg);
+  }
+}
+
+
+// CNAB General
+// ---------------------------------------
+html,
 body {
-  // background: red !important;
+  height: 100%;
+}
+
+.off-canvas-wrap{  
+  height: 100%;
+  overflow-y: auto;
+}
+
+html,
+body,
+.off-canvas-wrap,
+.inner-wrap,
+.main,
+.height-full {
+  min-height: 100vh !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.post-title {
+  font-family: $workbold;
+}
+
+.row-full {
+  max-width: 100%;
+}
+
+.height-full {
+  min-height: 100%;
+}
+
+.corner {
+  &::before{
+    @include corner;
+  }
+  &::after{
+    @include corner;
+    transform: rotate(90deg);
+    margin: -0.75rem 0 0 0.75rem;
+  }
+
+  &.corner-br {
+    &::before {
+      @include corner(0.5rem, auto, auto, 1.85rem, 10%);
+    }
+    &::after {
+      @include corner(0.5rem, auto, auto, 1.5rem, 10.5%);
+    }
+
+    &::after {
+      margin: 0 0.425rem -0.425rem 0;
+    }
+  }
+}
+
+
+// Typographic Scale
+// ---------------------------------------
+$base-font:  18px;                 // 18 - p
+
+$base-xxxlg: ($base-font * 4.775); // 96
+$base-xxlg:  ($base-font * 2.4);   // 48
+$base-xlg:   ($base-font * 1.8);   // 36 - h3
+$base-lg:    ($base-font * 1.2);   // 24 - h4, p.lead
+$base-sm:    ($base-font * 0.875); // 18 - small
+
+body {
+  line-height: 1.7256;
+  font-size: $base-font;
+  font-family: $work;
+  color: $navy;
+}
+
+h1 {
+  font-size: $base-xxxlg;
+}
+
+h2 {
+  font-size: $base-xxlg;
+}
+
+h3 {
+  font-size: $base-xlg;
+}
+
+h4,
+p.lead,
+.subhead {
+  font-size: $base-lg;
+}
+
+p {
+  font-size: $base-font;
+  padding-right: 7.5%;
+  max-width: 720px;
+}
+
+small {
+  font-size: $base-sm;
+}
+
+
+// CNAB Nav
+// ---------------------------------------
+.header {
+  min-height: 5rem;
+  
+  h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 5rem;
+    @include ripple;
+  }
+ 
+  img.logo {
+    max-height: 75px;
+    max-width: 200px;
+    display: inline-block;
+  }
+
+  nav {
+    ul.menu-desktop {
+
+      li {
+        margin: 0 1.25rem;
+      }
+
+      a {
+        font-family: $workbold;
+        color: $navy;
+        padding: 1.75rem 0rem;
+        margin: 0;
+        @include ripple;
+      }
+
+      .fa {
+        font-size: $base-lg;
+      }
+    }
+  }
+}
+
+
+// CNAB Sections
+// ---------------------------------------
+#intro {
+  padding-top: 15%;
+
+  h2 {
+    position: relative;
+    font-size: 3vw;
+
+    strong {
+      @include wipe;
+      color: $navy;
+      background-color: $yellowl;
+      margin: 0 0 1.5rem -2rem;
+      padding: 1.25rem 2.5rem;
+      display: inline-block;
+    } 
+  }
+
+  .subhead {
+    padding: 0 5% 0 1rem;
+    margin: -2rem 0 7.5rem;
+  }
+
+  .button {
+    @include wipe;
+    box-sizing: border-box;
+    font-size: $base-lg;
+    font-family: $workbold;
+    color: $navy;
+    width: 15rem;
+    height: 4.5rem;
+    margin: 2rem auto;
+    padding: 0.75rem 2rem;
+    border: 4px solid $navy;
+
+    &:hover {
+      border: 5px solid $navy;
+    }
+  }
+
+  small {
+    display: block;
+  }
+
+}
+
+
+#features {
+  background-color: $navy;
+  background: linear-gradient(lighten($navy, 7.5%), darken($navy, 7.5%));
+  padding-top: 9.25rem;
+  padding-bottom: 6.333rem;
+
+  h3, h4, p {
+    color: white;
+  }
+
+  img {
+    margin: 0 2rem 8.25rem;
+
+    &.feature-02 {
+      margin-top: 1rem;
+      margin-bottom: 12rem;
+    }
+  
+    &.feature-03 {
+      margin-top: -2.5rem;
+    }
+  }
+
+  h3 {
+    margin-top: 2rem;
+  }
+
+  p.lead {
+    padding-right: 12.5%;
+  }
+
+  p.bloglink {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    a {
+      color: $yellowl;
+      @include ripple($yellowl);
+    }
+  }
+}
+
+#resources {
+
+}
+
+#credits {
+
+}
+
+#footer {
+
+  .deislabs {
+    span {
+
+    }
+
+    em {
+      width: 3rem;
+      height: 3rem;
+      display: inline-block;
+      content: " ";
+      background-image: url(../img/deislabs.svg);
+      
+      &.dl-tri {
+
+      }
+
+      &.dl-sq {
+
+      }
+
+      &.dl-cir {
+
+      }
+    }
+  }
+
 }

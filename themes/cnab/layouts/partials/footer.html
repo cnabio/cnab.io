@@ -1,27 +1,38 @@
-</main>
-<footer class="footer">
-  <!-- <span>&copy; {{ now.Year }} {{ .Site.Title }}</span>
-  <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
-  <span>&middot;</span>
-  <span>Designed by <a href="http://21beats.com/" rel="noopener" target="_blank">️21beats️</a>️</span> -->
-  <span>Coming soon.️</span>
-</footer>
-<script src="{{.Site.BaseURL}}js/instantclick.min.js" data-no-instant></script>
-<script data-no-instant>InstantClick.init();</script>
-<script src="{{.Site.BaseURL}}js/highlight.min.js" data-no-instant></script>
-<script data-no-instant>
-  addMenuListener();
-  InstantClick.on('change', function() {
+  </main>
+  
+  <footer class="row row-full" id="footer">
+    <div class="show-for-large-up large-2 columns">&nbsp;</div>
+    <div class="small-6 large-4 columns">
+      <p>
+        <div class="deislabs">
+          <span>Deis Labs</span>
+          <em class="dl-tr"></em><em class="dl-sq"></em><em class="dl-ci"></em>
+        </div>
+        :  Open Source from Microsoft Azure.
+      </p>
+    </div>
+    <div class="small-6 large-4 columns">
+      <p><a href="https://github.com/deislabs/cnab-spec" target="_blank" class="right"><i class="fa fa-github" aria-hidden="true"></i></a></p>
+    </div>
+    <div class="show-for-large-up large-2 columns"></div>
+  </footer>
+
+  <!-- scripts for theme -->
+  <script src="{{.Site.BaseURL}}js/instantclick.min.js" data-no-instant></script>
+  <script data-no-instant>InstantClick.init();</script>
+  <script data-no-instant>
     addMenuListener();
-  });
-  function addMenuListener() {
-    var $toggle = document.querySelector('.menu-toggle');
-    var $body = document.querySelector('body');
-    $toggle.addEventListener('click', function() {
-      $body.classList.toggle('noscroll');
-    }, false);
-  }
-</script>
+    InstantClick.on('change', function() {
+      addMenuListener();
+    });
+    function addMenuListener() {
+      var $toggle = document.querySelector('.menu-toggle');
+      var $body = document.querySelexwctor('body');
+      $toggle.addEventListener('click', function() {
+        $body.classList.toggle('noscroll');
+      }, false);
+    }
+  </script>
+
 </body>
 </html>
