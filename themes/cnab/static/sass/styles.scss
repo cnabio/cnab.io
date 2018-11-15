@@ -206,10 +206,10 @@ h1, h2, h3, h4, h5, h6,
 
   &.corner-br {
     &::before {
-      @include corner(0.5rem, auto, auto, 1.85rem, 10%);
+      @include corner(0.5rem, auto, auto, 1.85rem, 5.5%);
     }
     &::after {
-      @include corner(0.5rem, auto, auto, 1.5rem, 10.5%);
+      @include corner(0.5rem, auto, auto, 1.5rem, 5.95%);
     }
 
     &::after {
@@ -388,21 +388,109 @@ small {
   p.bloglink {
     width: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding-right: 0;
 
     a {
       color: $yellowl;
+      line-height: 1.825;
       @include ripple($yellowl);
     }
   }
 }
 
 #resources {
+  padding-top: 9.25rem;
+  padding-bottom: 6.333rem;
 
+  h3 {
+    margin-bottom: 7.5rem;
+  }
+
+  .panel {
+    margin-bottom: 2.5rem;
+    background-color: white;
+
+    a {
+      padding: 1.75rem 2rem;
+      border: 4px solid darken($yellowl, 5%);
+      min-height: 12.2rem;
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      @include transition;
+
+      &:hover {
+        @include wipe;
+      }
+    }
+
+    h4 {
+      color: $navy;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      line-height: 1.875;
+      margin-bottom: 0;
+    }
+
+    &.panel-navy {
+      a {
+        border-color: $navy;
+      }
+      
+      .fa {
+        color: $navy;
+      }
+    }
+
+    &.panel-blue {
+      a {
+        border-color: $bluel;
+      }
+      
+      .fa {
+        color: $navy;
+      }
+    }
+
+    &.panel-green {
+      a {
+        border-color: $green;
+      }
+      .fa {
+        color: $green;
+      }
+    }
+
+    &.panel-bundles {
+      a {
+        background: url(../img/screener.png) no-repeat right top ;
+        padding-right: 30%;
+      }
+    }
+
+    &.panel-duffle {
+      img {
+        margin: 0.333rem 3.5rem 0.333rem 1rem;
+      }
+
+      p {
+        margin-top: 1.75rem 0;
+      }
+    }
+  }
+
+  h3, p {
+    color: $navy;
+  }
 }
 
 #credits {
-
+  h3, p {
+    color: $navy;
+  }
 }
 
 #footer {
