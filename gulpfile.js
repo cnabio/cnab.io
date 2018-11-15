@@ -44,6 +44,19 @@ gulp.task('images', function () {
 });
 
 
+// Copy
+gulp.task('copy', function () {
+  return gulp.src('themes/cnab/static/fonts/*')
+    .pipe(gulp.dest(destination + '/fonts'))
+    .pipe(notify({message: 'Fonts moved.'}));
+});
+gulp.task('copyall', function () {
+  return gulp.src('static/**/*')
+    .pipe(gulp.dest('public/'))
+    .pipe(notify({message: 'Copied all.'}));
+});
+
+
 // Clean
 gulp.task('clean', function () {
   return del([
@@ -52,9 +65,8 @@ gulp.task('clean', function () {
 });
 
 
-
 // 'gulp' default task to build the site assets
-gulp.task('default', ['styles', 'images']);
+gulp.task('default', ['styles', 'images', 'copy']);
 
 // 'gulp watch' to watch for changes during dev
 gulp.task('watch', function () {

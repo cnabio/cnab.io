@@ -5,7 +5,7 @@ _site/
 public/
 .ncurc.yml
 .publish/*
-.static/
+static/**/*
 node_modules/
 bower_components/
 vendor/
