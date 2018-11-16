@@ -453,7 +453,7 @@ small {
 
     p {
       line-height: 1.875;
-      margin-bottom: 0;
+      margin-bottom: 0.5rem;
     }
 
     &.panel-navy {
@@ -527,10 +527,11 @@ small {
 
   .deislabs {
     width: 5.5rem;
-    height: 6.5rem;
+    height: 7.3rem;
     display: inline-block;
     position: relative;
-    margin-top: -4.25rem;
+    margin-top: -5.35rem;
+    bottom: -1px;
 
     span {
       background: url(../img/deislabs.svg) no-repeat center bottom;
@@ -541,46 +542,66 @@ small {
       text-indent: -999em;
       position: absolute;
       bottom: 0;
+      @include transition;
     }
 
     em {
       width: 3rem;
       height: 3rem;
       display: inline-block;
-      content: " ";
       position: absolute;
-      opacity: 0.8;
       background-blend-mode: multiply;
+      mix-blend-mode: multiply;
+      content: " ";
+      @include transition(all, 0.3s, ease-in-out);
       
       &.dl-tr {
         background: url(../img/deislabs-tr.svg) no-repeat 50% 50%;
         background-size: contain;
-        background-blend-mode: multiply;
-        top: -1rem;
         left: 0;
+        top: 0;
       }
 
       &.dl-sq {
         background: url(../img/deislabs-sq.svg) no-repeat 50% 50%;
         background-size: contain;
-        background-blend-mode: multiply;
-        left: 0;
+        right: 0;
         bottom: 1.8rem;
       }
 
       &.dl-ci {
         background: url(../img/deislabs-ci.svg) no-repeat 50% 50%;
         background-size: contain;
-        background-blend-mode: multiply;
-        right: 0;
+        left: 0;
         bottom: 1.8rem;
+      }
+    }
+
+    a {
+      display: inline-block;
+      width: 5.5rem;
+      height: 7.3rem;
+
+      &:hover {
+        em {
+          &.dl-tr {
+            left: 2.3rem;
+            top: 2.5rem;
+          }
+          &.dl-sq {
+            right: 2.5rem;
+          }
+          &.dl-ci {
+            bottom: 4.2rem;
+          }
+        }
       }
     }
   }
 
   .fa {
     font-size: $base-lg;
-    margin: 2.35rem 0;
+    margin: 2.2rem 0;
     color: #333;
   }
 }
