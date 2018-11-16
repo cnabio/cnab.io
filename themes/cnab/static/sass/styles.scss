@@ -197,11 +197,13 @@ h1, h2, h3, h4, h5, h6,
 .corner {
   &::before{
     @include corner;
+    z-index: 502;
   }
   &::after{
     @include corner;
     transform: rotate(90deg);
     margin: -0.75rem 0 0 0.75rem;
+    z-index: 505;
   }
 
   &.corner-br {
@@ -268,6 +270,8 @@ small {
 // CNAB Nav
 // ---------------------------------------
 .header {
+  padding-left: 0;
+  padding-right: 0;
   min-height: 5rem;
   
   h1 {
@@ -302,6 +306,18 @@ small {
         font-size: $base-lg;
       }
     }
+  }
+
+  .menu-toggle {
+    float: right;
+    width: 3rem;
+    padding: 2.25rem 1.5rem;
+
+    &::before,
+    &::after {
+      background: $navy;
+    }
+
   }
 }
 
@@ -653,5 +669,42 @@ small {
     font-size: $base-lg;
     margin: 2.2rem 0;
     color: #333;
+  }
+}
+
+
+// Media Queries
+// ---------------------------------------
+// mobile
+@media screen and (max-width: 1024px) {
+  #intro {
+    background-image: none;
+    padding-top: 13.5rem;
+    
+    h2 {
+      font-size: $base-xlg;
+      display: inline-block;
+      
+      strong {
+        padding: 1.25rem 3.2rem;
+      }
+    }
+
+    p.subhead {
+      font-size: $base-lg;
+    }
+
+    .cnab-logo {
+      position: absolute;
+      bottom: auto;
+      right: auto;
+      left: 2.5rem;
+      width: 7.5rem;
+      top: -9.5rem;
+    }
+  }
+
+  #intro small, .corner {
+    display: none !important;
   }
 }
