@@ -401,11 +401,11 @@ small {
 }
 
 #resources {
-  padding-top: 9.25rem;
-  padding-bottom: 6.333rem;
+  padding-top: 5.25rem;
+  padding-bottom: 7.5rem;
 
   h3 {
-    margin-bottom: 7.5rem;
+    margin-bottom: 4.5rem;
   }
 
   .panel {
@@ -515,8 +515,50 @@ small {
 }
 
 #credits {
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+
+  h3 {
+    margin-bottom: 2rem;
+  }
+  
   h3, p {
     color: $navy;
+    position: relative;
+  }
+
+  img {
+    max-width: 25%;
+  }
+}
+
+.sep {
+  &::before,
+  &::after {
+    content: " ";
+    display: inline-block;
+    height: 2px;
+    width: 50%;
+    // margin-left: -25%;
+    background: rgba(0,0,0,0.1);
+    top: 1.25rem;
+  }
+}
+
+.sep-sides {
+  &::before,
+  &::after {
+    width: 44%;
+    top: 1.25rem;
+    position: absolute;
+  }
+
+  &::before {
+    left: -10%;
+  }
+
+  &::after {
+    right: -10%;
   }
 }
 
@@ -585,7 +627,7 @@ small {
       &:hover {
         em {
           &.dl-tr {
-            left: 2.3rem;
+            left: 2.2rem;
             top: 2.5rem;
           }
           &.dl-sq {
