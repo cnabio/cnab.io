@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1838px" height="490px" viewBox="0 0 1838 490" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Intro</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1843" height="786"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="78.7231228%" y1="-44.0671411%" x2="3.52746212%" y2="230.043317%" id="linearGradient-4">
+            <stop stop-color="#CEDAFA" offset="0%"></stop>
+            <stop stop-color="#F7F9FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="85.3553391%" y1="14.6446609%" x2="14.6446609%" y2="85.3553391%" id="linearGradient-5">
+            <stop stop-color="#86E4DB" offset="0%"></stop>
+            <stop stop-color="#3FD0C3" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-6" points="777 0 1554 355.378906 777 710.757812 0 355.378906"></polygon>
+        <path d="M358.5,475 C378.658393,475 395,458.658393 395,438.5 C395,418.341607 378.658393,402 358.5,402 C338.341607,402 322,418.341607 322,438.5 C322,458.658393 338.341607,475 358.5,475 Z" id="path-8"></path>
+        <mask id="mask-9" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="73" height="73" fill="white">
+            <use xlink:href="#path-8"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Full" transform="translate(-2.000000, -421.000000)">
+            <g id="Intro" transform="translate(2.000000, 125.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Rectangle-4" fill-rule="nonzero"></g>
+                <rect id="white-gradient" fill="url(#linearGradient-3)" fill-rule="nonzero" mask="url(#mask-2)" x="0" y="296" width="1878" height="516"></rect>
+                <polyline id="Path-3" fill="url(#linearGradient-4)" fill-rule="nonzero" style="mix-blend-mode: screen;" mask="url(#mask-2)" points="196 397.953125 1300 520.878415 196 700.953125"></polyline>
+                <rect id="Rectangle-9" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-2)" x="319" y="652" width="247" height="26"></rect>
+                <rect id="Rectangle-9" fill="#D8D8D8" fill-rule="nonzero" opacity="0.420703125" mask="url(#mask-2)" x="319" y="692" width="247" height="26"></rect>
+                <rect id="Rectangle-9" fill="#D8D8D8" fill-rule="nonzero" opacity="0.420703125" mask="url(#mask-2)" x="319" y="732" width="247" height="26"></rect>
+                <text id="DBs" mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="550.459059" y="639">DBs</tspan>
+                </text>
+                <text id="Secrets" mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="600.40447" y="608">Secrets</tspan>
+                </text>
+                <g id="triangle" mask="url(#mask-2)">
+                    <g transform="translate(139.000000, 465.000000)">
+                        <mask id="mask-7" fill="white">
+                            <use xlink:href="#path-6"></use>
+                        </mask>
+                        <use id="Rectangle-2" stroke="none" fill="url(#linearGradient-5)" fill-rule="nonzero" xlink:href="#path-6"></use>
+                        <rect id="white-gradient" stroke="none" fill="url(#linearGradient-3)" fill-rule="nonzero" mask="url(#mask-7)" x="57" y="-163" width="1440" height="516"></rect>
+                    </g>
+                </g>
+                <rect id="Rectangle-13" fill="#E83683" fill-rule="nonzero" mask="url(#mask-2)" x="508" y="437" width="54" height="54"></rect>
+                <circle id="Oval-4" fill="#CCFF66" fill-rule="nonzero" mask="url(#mask-2)" cx="526.5" cy="620.5" r="18.5"></circle>
+                <circle id="Oval-4" fill="#D3DDF7" fill-rule="nonzero" mask="url(#mask-2)" cx="555.5" cy="592.5" r="28.5"></circle>
+                <rect id="Rectangle-10" fill="#D3DDF7" fill-rule="nonzero" mask="url(#mask-2)" x="415" y="602" width="36" height="36"></rect>
+                <rect id="Rectangle-10" fill="#0F9DDA" fill-rule="nonzero" mask="url(#mask-2)" x="435" y="622" width="36" height="36"></rect>
+                <rect id="Rectangle-10" fill="#CCFF66" fill-rule="nonzero" mask="url(#mask-2)" x="365" y="602" width="36" height="36"></rect>
+                <rect id="Rectangle-10" fill="#2EC4B6" fill-rule="nonzero" mask="url(#mask-2)" x="385" y="622" width="36" height="36"></rect>
+                <rect id="Rectangle-8" fill="#2EC4B6" fill-rule="nonzero" mask="url(#mask-2)" x="581" y="465" width="22" height="66"></rect>
+                <rect id="Rectangle-8" fill="#2EC4B6" fill-rule="nonzero" mask="url(#mask-2)" x="611" y="465" width="22" height="66"></rect>
+                <polygon id="Polygon" fill="#3731AA" fill-rule="nonzero" mask="url(#mask-2)" points="454 503 493.944374 532.021286 478.686981 578.978714 429.313019 578.978714 414.055626 532.021286"></polygon>
+                <rect id="Rectangle-14" fill="#D3DDF7" fill-rule="nonzero" mask="url(#mask-2)" x="475" y="509" width="38" height="38"></rect>
+                <circle id="Oval-3" stroke="#D3DDF7" stroke-width="5" fill-rule="nonzero" mask="url(#mask-2)" cx="293.5" cy="438.5" r="34"></circle>
+                <g id="Oval-3" opacity="0.474162946" style="mix-blend-mode: multiply;" stroke-dasharray="10" fill-rule="nonzero" mask="url(#mask-2)" stroke="#D3DDF7" stroke-width="10">
+                    <use mask="url(#mask-9)" xlink:href="#path-8"></use>
+                </g>
+                <circle id="Oval-3" fill="#D3DDF7" fill-rule="nonzero" mask="url(#mask-2)" cx="328" cy="493" r="42"></circle>
+                <path d="M695,422.826238 L677.663119,457.5 L712.336881,457.5 L695,422.826238 Z" id="Triangle" stroke="#E83683" stroke-width="7" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <polygon id="Triangle" fill="#2EC4B6" fill-rule="nonzero" style="mix-blend-mode: multiply;" mask="url(#mask-2)" points="439 400 462 446 416 446"></polygon>
+                <polygon id="Triangle" fill="#CCFF66" fill-rule="nonzero" style="mix-blend-mode: multiply;" mask="url(#mask-2)" points="449 406 472 452 426 452"></polygon>
+                <text id="Code" mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="308.445412" y="565">Code</tspan>
+                </text>
+                <text id="Releases" mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="288.390823" y="443">Releases</tspan>
+                </text>
+                <text id="Deploys" mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="407.40447" y="479">Deploys</tspan>
+                </text>
+                <text id="Nodes" mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="259.431764" y="749">Nodes</tspan>
+                </text>
+                <text id="Images" mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="294.418117" y="629">Images</tspan>
+                </text>
+                <text id="CICD" mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="586.445412" y="449">CICD</tspan>
+                </text>
+                <text id="DNS" mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="680.459059" y="485">DNS</tspan>
+                </text>
+                <text id="Packages" mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="639.390823" y="532">Packages</tspan>
+                </text>
+                <rect id="Rectangle-11" fill="#5E58CB" fill-rule="nonzero" mask="url(#mask-2)" x="706" y="513" width="30" height="30"></rect>
+                <rect id="Rectangle-11" fill="#5E58CB" fill-rule="nonzero" mask="url(#mask-2)" x="726" y="503" width="20" height="20"></rect>
+                <rect id="Rectangle-11" fill="#5E58CB" fill-rule="nonzero" mask="url(#mask-2)" x="655" y="546" width="15" height="15"></rect>
+                <rect id="Rectangle-11" fill="#5E58CB" fill-rule="nonzero" mask="url(#mask-2)" x="626" y="493" width="20" height="20"></rect>
+                <rect id="Rectangle-18" fill="#FFF9F2" fill-rule="nonzero" mask="url(#mask-2)" x="216" y="521" width="46" height="46"></rect>
+                <rect id="Rectangle-18" fill="#FFFFFF" fill-rule="nonzero" opacity="0.472488839" mask="url(#mask-2)" x="160" y="603" width="112" height="112"></rect>
+                <text id="A-CNAB." mask="url(#mask-2)" font-family="SpaceMono-Regular, Space Mono" font-size="16" font-weight="normal" letter-spacing="0.2352942" fill="#B6B9C1">
+                    <tspan x="1385.40447" y="616">A CNAB.</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

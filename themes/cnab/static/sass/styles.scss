@@ -309,7 +309,11 @@ small {
 // CNAB Sections
 // ---------------------------------------
 #intro {
-  padding-top: 15%;
+  border-top: 2px solid rgba(0,0,0,0.05);
+  padding-top: 12%;
+  background: #fff url(../img/intro.svg) no-repeat center 110%;
+  background-size: 150%;
+
 
   h2 {
     position: relative;
@@ -328,6 +332,12 @@ small {
   .subhead {
     padding: 0 5% 0 1rem;
     margin: -2rem 0 7.5rem;
+  }
+
+  .cnab-logo {
+    position: absolute;
+    bottom: 1vh;
+    right: -12%;
   }
 
   .button {
