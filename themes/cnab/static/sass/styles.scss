@@ -206,10 +206,10 @@ h1, h2, h3, h4, h5, h6,
 
   &.corner-br {
     &::before {
-      @include corner(0.5rem, auto, auto, 1.85rem, 5.5%);
+      @include corner(0.5rem, auto, auto, 1.85rem, 5.35%);
     }
     &::after {
-      @include corner(0.5rem, auto, auto, 1.5rem, 5.95%);
+      @include corner(0.5rem, auto, auto, 1.5rem, 5.85%);
     }
 
     &::after {
@@ -378,7 +378,8 @@ small {
   }
 
   h3 {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   p.lead {
@@ -389,6 +390,7 @@ small {
     width: 100%;
     margin: 0 auto;
     padding-right: 0;
+    font-family: $workbold;
 
     a {
       color: $yellowl;
@@ -417,10 +419,29 @@ small {
       display: inline-block;
       box-sizing: border-box;
       width: 100%;
+      position: relative;
       @include transition;
 
       &:hover {
-        @include wipe;
+        
+        &::after {
+          width: 100%;
+          opacity: 0.25;
+        }
+      }
+
+      &::after {
+        width: 0%;
+        opacity: 0;;
+        height: 100%;
+        @include transition;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        content: " ";
+        background-color: $bluel;
       }
     }
 
@@ -455,6 +476,12 @@ small {
       }
     }
 
+    &.panel-yellow {
+      &:hover {
+        border-color: $bluel !important;
+      }
+    }
+
     &.panel-green {
       a {
         border-color: $green;
@@ -477,7 +504,7 @@ small {
       }
 
       p {
-        margin-top: 1.75rem 0;
+        margin: 1.75rem 0;
       }
     }
   }
@@ -494,10 +521,26 @@ small {
 }
 
 #footer {
+  background-color: white;
+  padding-bottom: 1rem;
+  border-top: 2px solid rgba(0,0,0,0.05);
 
   .deislabs {
-    span {
+    width: 5.5rem;
+    height: 6.5rem;
+    display: inline-block;
+    position: relative;
+    margin-top: -4.25rem;
 
+    span {
+      background: url(../img/deislabs.svg) no-repeat center bottom;
+      width: 100%;
+      height: 3rem;
+      background-size: contain;
+      display: inline-block;
+      text-indent: -999em;
+      position: absolute;
+      bottom: 0;
     }
 
     em {
@@ -505,20 +548,39 @@ small {
       height: 3rem;
       display: inline-block;
       content: " ";
-      background-image: url(../img/deislabs.svg);
+      position: absolute;
+      opacity: 0.8;
+      background-blend-mode: multiply;
       
-      &.dl-tri {
-
+      &.dl-tr {
+        background: url(../img/deislabs-tr.svg) no-repeat 50% 50%;
+        background-size: contain;
+        background-blend-mode: multiply;
+        top: -1rem;
+        left: 0;
       }
 
       &.dl-sq {
-
+        background: url(../img/deislabs-sq.svg) no-repeat 50% 50%;
+        background-size: contain;
+        background-blend-mode: multiply;
+        left: 0;
+        bottom: 1.8rem;
       }
 
-      &.dl-cir {
-
+      &.dl-ci {
+        background: url(../img/deislabs-ci.svg) no-repeat 50% 50%;
+        background-size: contain;
+        background-blend-mode: multiply;
+        right: 0;
+        bottom: 1.8rem;
       }
     }
   }
 
+  .fa {
+    font-size: $base-lg;
+    margin: 2.35rem 0;
+    color: #333;
+  }
 }
