@@ -141,7 +141,7 @@ $workbold: 'work_sanssemibold', 'Helvetica Neue', Helvetica, Arial, Geneva, sans
     background-blend-mode: overlay;
     content: "";
     opacity: 0;
-    background-color: $color;
+    background-color: $color !important;
     transform: rotate(-15deg);
     z-index: -10;
     @include transition;
@@ -312,20 +312,19 @@ small {
   border-top: 2px solid rgba(0,0,0,0.05);
   padding-top: 12%;
   background: #fff url(../img/intro.svg) no-repeat center 110%;
-  background-size: 150%;
-
 
   h2 {
     position: relative;
     font-size: 3vw;
 
     strong {
-      @include wipe;
+      @include wipe($green);
       color: $navy;
       background-color: $yellowl;
       margin: 0 0 1.5rem -2rem;
       padding: 1.25rem 2.5rem;
       display: inline-block;
+      z-index: 500;
     } 
   }
 
@@ -336,12 +335,12 @@ small {
 
   .cnab-logo {
     position: absolute;
-    bottom: 1vh;
+    bottom: 5vh;
     right: -12%;
   }
 
   .button {
-    @include wipe;
+    @include wipe($green);
     box-sizing: border-box;
     font-size: $base-lg;
     font-family: $workbold;
@@ -360,7 +359,6 @@ small {
   small {
     display: block;
   }
-
 }
 
 
