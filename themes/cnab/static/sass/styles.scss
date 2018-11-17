@@ -85,7 +85,7 @@ $workbold: 'work_sanssemibold', 'Helvetica Neue', Helvetica, Arial, Geneva, sans
   transform: translateY(-50%);
 }
 
-@mixin corner($corner: 0.5rem, $cornertop: -1rem, $cornerleft: -3rem, $cornerbottom: auto, $cornerright: auto) {
+@mixin corner($corner: 0.5rem, $cornertop: -1rem, $cornerleft: -1rem, $cornerbottom: auto, $cornerright: auto) {
   width: $corner;
   height: ($corner * 4);
   display: inline-block;
@@ -149,7 +149,7 @@ $workbold: 'work_sanssemibold', 'Helvetica Neue', Helvetica, Arial, Geneva, sans
 
   &:hover {
     color: white;
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   &:hover::after {
@@ -208,10 +208,10 @@ h1, h2, h3, h4, h5, h6,
 
   &.corner-br {
     &::before {
-      @include corner(0.5rem, auto, auto, 1.85rem, 5.35%);
+      @include corner(0.5rem, auto, auto, 1.85rem, 8.35%);
     }
     &::after {
-      @include corner(0.5rem, auto, auto, 1.5rem, 5.85%);
+      @include corner(0.5rem, auto, auto, 1.5rem, 8.85%);
     }
 
     &::after {
@@ -326,37 +326,47 @@ small {
 // ---------------------------------------
 #intro {
   border-top: 2px solid rgba(0,0,0,0.05);
-  padding-top: 12%;
-  background: #fff url(../img/intro.svg) no-repeat center 110%;
+  padding-top: 7.5rem;
+  background: #fff url(../img/intro.svg) no-repeat center 21rem;
+  background-size: 120rem;
+  z-index: -10;
+  min-height: 53rem !important;
 
   h2 {
     position: relative;
     font-size: 3vw;
+    margin-left: -4rem;
 
     strong {
       @include wipe($green);
       color: $navy;
       background-color: $yellowl;
-      margin: 0 0 1.5rem -2rem;
+      margin: 0 0 1.5rem;
       padding: 1.25rem 2.5rem;
-      display: inline-block;
+      display: inline-block;  
       z-index: 500;
     } 
+
+    .corner,
+    .corner-br {
+      margin-left: -2rem;
+    }
   }
 
   .subhead {
     padding: 0 5% 0 1rem;
-    margin: -2rem 0 7.5rem;
+    margin: -2rem 0 12rem -2rem;
   }
 
   .cnab-logo {
     position: absolute;
-    bottom: 5vh;
-    right: -12%;
+    top: 24rem;
+    left: 50%;
+    margin-left: 26rem;
+    width: 8rem;
   }
 
   .button {
-    @include wipe($green);
     box-sizing: border-box;
     font-size: $base-lg;
     font-family: $workbold;
@@ -366,6 +376,9 @@ small {
     margin: 2rem auto;
     padding: 0.75rem 2rem;
     border: 4px solid $navy;
+    z-index: 600;
+    background: transparent !important;
+    @include wipe($green);
 
     &:hover {
       border: 5px solid $navy;
