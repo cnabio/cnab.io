@@ -690,6 +690,21 @@ small {
 // ---------------------------------------
 // mobile
 @media screen and (max-width: 1024px) {
+
+  .row,
+  .row-full {
+    width: 95% !important;
+    padding-left: 2.5% !important;
+    padding-right: 2.5% !important;
+
+    .row,
+    .row-full {
+      width: 100%;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+  
   #intro {
     background-image: none;
     padding-top: 13.5rem;
