@@ -165,6 +165,7 @@ $workbold: 'work_sanssemibold', 'Helvetica Neue', Helvetica, Arial, Geneva, sans
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 .off-canvas-wrap{  
