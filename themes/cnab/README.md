@@ -1,33 +1,12 @@
-Paper
-========
+![Theme Screenshot](https://raw.githubusercontent.com/deislabs/cnab.io/master/themes/cnab/img/screenshot.png?token=AAp4ctyXT6Xuaer1Vm8SXT0HscNhS5WGks5cBvT9wA%3D%3D)
 
-🥛 A simple, clean, flexible Hugo theme.
+CNAB Theme
+============
 
-Current version: [v2.0](https://github.com/nanxiaobei/hugo-paper/releases)
+A Hugo theme, build on top of [Paper](https://github.com/nanxiaobei/hugo-paper/) using the Foundation framework.
 
 ## Overview
 
 > Demo: https://nanxiaobei.github.io/hugo-paper/
 >
 > Hugo Themes: https://themes.gohugo.io/hugo-paper/
-
-![Paper Theme Screenshot](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png)
-
-
-## Features
-
-* ⚡️ Blazing fast
-* ✉️ Just simple
-* ✏️ Paper clean
-
-
-## Installation
-
-Inside the folder of your Hugo site run:
-
-```bash
-$ cd themes
-$ git clone https://github.com/nanxiaobei/hugo-paper
-```
-
-*For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.*
