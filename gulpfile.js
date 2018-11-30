@@ -25,8 +25,8 @@ gulp.task('styles', function () {
     .pipe(sourcemaps.init())
     .pipe(cssnano())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(destination + '/css'))
     .pipe(gulp.dest('themes/cnab/static/css/'))
+    .pipe(gulp.dest(destination + '/css'))
     .pipe(notify({message: 'Styles compiled.'}));
 });
 

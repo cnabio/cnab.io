@@ -159,6 +159,20 @@ $workbold: 'work_sanssemibold', 'Helvetica Neue', Helvetica, Arial, Geneva, sans
   }
 }
 
+@mixin button($color: $navy) {
+  box-sizing: border-box;
+  font-family: $workbold;
+  color: $color;
+  width: 15rem;
+  height: 4.5rem;
+  margin: 2rem auto;
+  line-height: 3;
+  padding: 0 2rem;
+  border: 4px solid $color;
+  z-index: 600;
+  background: transparent !important;
+}
+
 
 // CNAB General
 // ---------------------------------------
@@ -397,17 +411,8 @@ body.list.noscroll {
   }
 
   .button {
-    box-sizing: border-box;
+    @include button;
     font-size: $base-lg;
-    font-family: $workbold;
-    color: $navy;
-    width: 15rem;
-    height: 4.5rem;
-    margin: 2rem auto;
-    padding: 0.75rem 2rem;
-    border: 4px solid $navy;
-    z-index: 600;
-    background: transparent !important;
     @include wipe($green);
 
     &:hover {
@@ -456,8 +461,7 @@ body.list.noscroll {
   p.bloglink {
     width: 100%;
     margin: 0 auto;
-    padding-right: 0;
-    font-family: $workbold;
+    padding: 0;
 
     a {
       color: $yellowl;
@@ -631,16 +635,16 @@ body.list.noscroll {
 
 #footer {
   background-color: white;
-  padding-bottom: 1rem;
   border-top: 2px solid rgba(0,0,0,0.05);
+  position: relative;
+  min-height: 3rem;
 
   .deislabs {
     width: 5.5rem;
     height: 7.3rem;
     display: inline-block;
-    position: relative;
-    margin-top: -5.35rem;
-    bottom: -1px;
+    position: absolute;
+    top: -4rem;
 
     span {
       background: url(../img/deislabs.svg) no-repeat center bottom;
@@ -708,9 +712,13 @@ body.list.noscroll {
     }
   }
 
+  p {
+    margin: 2rem 0;
+    padding: 0 0 0 6rem;
+  }
+
   .fa {
     font-size: $base-lg;
-    margin: 2.2rem 0;
     color: #333;
   }
 }
@@ -723,60 +731,148 @@ body.list.noscroll {
 
   .row,
   .row-full {
-    width: 95% !important;
-    padding-left: 2.5% !important;
-    padding-right: 2.5% !important;
+    width: 96% !important;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
 
     .row,
     .row-full {
-      width: 100%;
+      width: 100% !important;
       padding-left: 0 !important;
       padding-right: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  .small-12 {
+    .small-12 {
+      padding-left: 0 !important;
+      padding-right: 0 !important; 
     }
   }
   
   #intro {
     background-image: none;
-    padding-top: 2.5rem;
-
-    .row-full {
-      width: 100% !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
+    padding-top: 1rem;
+    min-height: 35rem !important;
     
     h2 {
       font-size: $base-xlg;
       display: inline-block;
-      margin-left: 3.5%;
+      margin: 4.5rem -1.6rem 2rem -1.6rem;
+      font-size: 6vw;
+      z-index: 500;
       
       strong {
-        padding: 1.25rem 3.2rem;
+        padding: 1rem 20% 1rem 1.6rem;
       }
     }
 
     p.subhead {
       font-size: $base-lg;
-      margin: -2rem 0 1rem 3.5%;
+      margin: -2rem 0 1rem 0;
+      padding: 0;
     }
 
     .cnab-logo {
       position: absolute;
+      right: 3.5%;
+      left: auto;
+      width: 18vw;
+      top: 3.75rem;
       bottom: auto;
-      right: auto;
-      left: 2.5rem;
-      width: 7.5rem;
-      top: -9.5rem;
+      z-index: 850;
     }
 
     .button {
       margin: 2rem 0;
-      position: absolute;
-      left: 3.5%;
+      position: relative;
+      left: auto;
+      right: auto;
+      width: 100%;
+    }
+  }
+
+  #features {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+
+    h3 {
+      font-size: $base-lg;
+      margin: 3rem 0 0.825rem;
+    }
+
+    p.lead {
+      font-size: $base-font;
+      margin: 0;
+    }
+    
+    img {
+      display: none;
+    }
+
+    p.bloglink a {
+      @include button(white);
+      @include wipe;
+      line-height: 3;
+      width: 100%;
+      margin: 2.5rem 0 0.5rem;
+      height: auto;
     }
   }
 
   #resources {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    
+    h3 {
+      font-size: $base-lg;
+      margin-bottom: 3rem;
+    }
+
+    .panel {
+      width: 100%;
+      margin: 0 0 2rem;
+      padding: 0;
+      
+      a {
+        padding: 1rem 1.25rem;
+        min-height: 3rem;
+
+        h4 {
+          margin-bottom: 0.825rem;
+        }
+
+        p {
+          padding-right: 0;
+          line-height: 1.5;
+          font-size: $base-sm;
+        }
+      }
+
+      &.panel-bundles {
+        a {
+          background-image: none;
+          padding-right: 1.25rem;
+        }
+      }
+
+      &.panel-duffle {
+        font-size: $base-sm;
+
+        img {
+          float: right;
+          max-width: 12vw;
+          margin: 1.5rem 1.75rem 1.5rem 0.25rem;
+        }
+
+        p.lead {
+          font-size: 3.25vw;
+        }
+
+      }
+    }
 
   }
 
@@ -792,13 +888,14 @@ body.list.noscroll {
   #footer.row-full {
     width: 100% !important;
     padding: 0 !important;
-    min-height: 5.5rem;
+    min-height: 5rem;
 
     .deislabs {
       width: 4.5rem;
       height: 7rem;
       margin-left: 4%;
-      margin-top: -4rem;
+      top: -4rem;
+      position: absolute;
 
       a {
 
@@ -826,8 +923,12 @@ body.list.noscroll {
       }
     }
 
+    p {
+      padding: 0;
+    }
+
     .fa {
-      margin: 2rem 0;
+      margin: 0;
     }
   }
 
