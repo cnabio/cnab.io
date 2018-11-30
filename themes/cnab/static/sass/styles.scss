@@ -745,6 +745,10 @@ body.list.noscroll {
     }
   }
 
+  .height-full {
+    min-height: 50vh !important;
+  }
+
   .small-12 {
     .small-12 {
       padding-left: 0 !important;
@@ -848,6 +852,10 @@ body.list.noscroll {
           padding-right: 0;
           line-height: 1.5;
           font-size: $base-sm;
+
+          .fa {
+            display: none;
+          }
         }
       }
 
