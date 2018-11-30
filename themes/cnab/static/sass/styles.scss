@@ -737,11 +737,18 @@ body.list.noscroll {
   
   #intro {
     background-image: none;
-    padding-top: 13.5rem;
+    padding-top: 2.5rem;
+
+    .row-full {
+      width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
     
     h2 {
       font-size: $base-xlg;
       display: inline-block;
+      margin-left: 3.5%;
       
       strong {
         padding: 1.25rem 3.2rem;
@@ -750,6 +757,7 @@ body.list.noscroll {
 
     p.subhead {
       font-size: $base-lg;
+      margin: -2rem 0 1rem 3.5%;
     }
 
     .cnab-logo {
@@ -759,6 +767,67 @@ body.list.noscroll {
       left: 2.5rem;
       width: 7.5rem;
       top: -9.5rem;
+    }
+
+    .button {
+      margin: 2rem 0;
+      position: absolute;
+      left: 3.5%;
+    }
+  }
+
+  #resources {
+
+  }
+
+  #credits {
+    padding-bottom: 5rem;
+    
+    img {
+      min-width: 150px;
+      margin: 1.5rem 2%;
+    }
+  }
+
+  #footer.row-full {
+    width: 100% !important;
+    padding: 0 !important;
+    min-height: 5.5rem;
+
+    .deislabs {
+      width: 4.5rem;
+      height: 7rem;
+      margin-left: 4%;
+      margin-top: -4rem;
+
+      a {
+
+        em {
+          width: 2.5rem;
+        }
+      }
+
+      &:hover {
+        em {
+          &.dl-tr {
+            left: auto;
+            right: 0;
+            top: 2.2rem;
+          }
+          &.dl-sq {
+            left: 0;
+            right: auto;
+          }
+          &.dl-ci {
+            bottom: auto;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .fa {
+      margin: 2rem 0;
     }
   }
 
