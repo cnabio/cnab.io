@@ -13,7 +13,7 @@
     {{ if .Params.tags }}
     <ul class="post-tags">
       {{ range .Params.tags }}
-      <li><a href="{{$.Site.BaseURL}}tags/{{ . | urlize }}/">{{ . }}</a></li>
+      <li><a href="{{.Site.BaseURL}}/tags/{{ . | urlize }}/">{{ . }}</a></li>
       {{ end }}
     </ul>
     {{ end }}
