@@ -1,4 +1,4 @@
-baseURL = "https://cnab.io/"
+baseURL = "https://cnab.io"
 title = "CNAB - Cloud Native Application Bundle"
 theme = "cnab"
 languageCode = "en-us"
