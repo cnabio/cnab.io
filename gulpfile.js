@@ -66,12 +66,12 @@ gulp.task('clean', function () {
 
 
 // 'gulp' default task to build the site assets
-gulp.task('default', ['styles', 'images', 'copy']);
+gulp.task('default', gulp.series('styles', 'images', 'copy'), function() { });
 
 // 'gulp watch' to watch for changes during dev
 gulp.task('watch', function () {
 
-  gulp.watch('themes/cnab/static/sass/**/*.scss', ['styles']);
+  gulp.watch('themes/cnab/static/sass/**/*.scss', gulp.series('styles'));
 
   livereload.listen();
 
