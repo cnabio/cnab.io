@@ -585,6 +585,28 @@ body.list.noscroll {
   }
 }
 
+#communications {
+  padding-bottom: 10rem;
+  h3, p {
+    color: $navy;
+  }
+
+  h4 {
+    margin: 3.5rem auto 1rem;
+    font-size: 1.25rem;
+    color: $navy;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.925;
+
+    a {
+      @include ripple;
+    }
+  }
+}
+
 #credits {
   padding-top: 4rem;
   padding-bottom: 8rem;
