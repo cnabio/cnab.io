@@ -4,7 +4,7 @@ description: Community projects and contributions to the CNAB ecosystem
 ---
 
 Looking to get started with CNAB or maybe build on top of an existing project?
-Here are some open-source projects and SDKs for you to use, or take a look the
+Here are some open-source projects and SDKs for you to use, or take a look at the
 [CNAB community repository][cnab-community] for additional assets that you can 
 use in your own project.
 
@@ -30,7 +30,7 @@ Just because you see one already listed for your language, don't let that hold y
 Feel free to contribute to that SDK, or start your own.
 
 ## Go
-_We are currently working on extracting a Go SDK out of the Duffle codebase_
+_We are currently working on extracting a Go SDK out of the [Duffle codebase][duffle-pkg]._
 
 ## .NET
 * [CNAB.NET](https://github.com/deislabs/cnab-netstandard)
@@ -44,3 +44,4 @@ Have you written an SDK or tool that works with the CNAB spec? Submit a PR
 to <https://github.com/deislabs/cnab.io> and we will list it here!
 
 [cnab-community]: https://github.com/deislabs/cnab-community
+[duffle-pkg]: https://github.com/deislabs/duffle/tree/master/pkg
