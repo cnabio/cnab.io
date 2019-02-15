@@ -306,7 +306,11 @@ small {
     ul.menu-desktop {
 
       li {
-        margin: 0 1.25rem;
+        margin: 0 1rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       a {
