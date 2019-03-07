@@ -575,11 +575,15 @@ body.list.noscroll {
 
     &.panel-duffle {
       img {
-        margin: 0.333rem 3.5rem 0.333rem 1rem;
+        margin: 0.2rem 3.5rem 0.2rem 1rem;
+      }
+
+      a {
+        padding: 1.2rem 2rem;
       }
 
       p {
-        margin: 1.75rem 0;
+        margin: 1.5rem 0;
       }
     }
   }
@@ -589,7 +593,7 @@ body.list.noscroll {
   }
 }
 
-#communications {
+.row#communications {
   padding-bottom: 10rem;
   h3, p {
     color: $navy;
@@ -746,6 +750,36 @@ body.list.noscroll {
   .fa {
     font-size: $base-lg;
     color: #333;
+  }
+}
+
+
+// CNAB sub pages
+article.post {
+  .post-content {
+    padding-bottom: 7.5rem;
+    
+    h2 {
+      color: $navy;
+      margin: 4rem 0 1rem;
+    }
+
+    h3 {
+      color: $green;
+      display: inline-block;
+      margin: 1.75rem 0 0.825rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.125rem;
+    }
+
+    ul {
+      margin: 1.5rem 0 3rem;
+    }
+
+    p {
+      line-height: 1.85;
+    }
   }
 }
 
