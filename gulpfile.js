@@ -13,6 +13,7 @@ var gulp = require('gulp'),
   del = require('del'),
   cssnano = require('gulp-cssnano'),
   sourcemaps = require('gulp-sourcemaps'),
+  git = require('gulp-git'),
   streamqueue = require('streamqueue');
 
 
@@ -41,6 +42,15 @@ gulp.task('images', function () {
       .pipe(notify({message: 'Images moved.'}))
       .pipe(gulp.dest(destination + '/img'))
   )
+});
+
+
+// Clone Docs for Hugo
+gulp.task('clone', function(cb) {
+  git.clone('https://github.com/deislabs/cnab-spec', {args: './content/docs', quiet: false}, function(err) {
+    // handle err
+    cb(err);
+  });
 });
 
 
