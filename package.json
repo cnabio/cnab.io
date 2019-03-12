@@ -4,7 +4,8 @@
   "description": "site for cloud native application bundle project",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "gulp-git": "^2.9.0"
   },
   "devDependencies": {
     "del": "^3.0.0",
