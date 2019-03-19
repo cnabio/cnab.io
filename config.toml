@@ -2,3 +2,105 @@ baseURL = "https://cnab.io"
 title = "CNAB - Cloud Native Application Bundle"
 theme = "cnab"
 languageCode = "en-us"
+
+  [[menu.main]]
+    name = "CNAB Specification"
+    identifier = "cnab-spec"
+    url = "/docs/000-index"
+    weight = "-10"
+  [[menu.main]]
+    name = "Bundle Core"
+    identifier = "100-cnab"
+    weight = "1"
+  [[menu.main]]
+    name = "Core Overview"
+    identifier = "100-cnab-core"
+    url = "/docs/100-cnab/"
+    weight = "100"
+    parent = "100-cnab"
+  [[menu.main]]
+    name = "The bundle.json File"
+    identifier = "101-bundle-json"
+    url = "/docs/101-bundle-json/"
+    weight = "101"
+    parent = "100-cnab"
+  [[menu.main]]
+    name = "The Innvocation Image Format"
+    identifier = "102-innvocation-image"
+    url = "/docs/102-innvocation-image/"
+    weight = "102"
+    parent = "100-cnab"
+  [[menu.main]]
+    name = "Bundle Runtime"
+    identifier = "103-bundle-runtime"
+    url = "/docs/103-bundle-runtime/"
+    weight = "103"
+    parent = "100-cnab"
+  [[menu.main]]
+    name = "Bundle Formats"
+    identifier = "104-bundle-formats"
+    url = "/docs/104-bundle-formats/"
+    weight = "104"
+    parent = "100-cnab"
+
+  [[menu.main]]
+    name = "Bundle Registry"
+    identifier = "200-CNAB-registries"
+    url = "/docs/200-CNAB-registries/"
+    weight = "200"
+  [[menu.main]]
+    name = "Bundle Security"
+    identifier = "300-CNAB-security"
+    url = "/docs/300-CNAB-security/"
+    weight = "300"
+  [[menu.main]]
+    name = "Bundle Claims"
+    identifier = "400-claims"
+    url = "/docs/400-claims/"
+    weight = "400"
+
+  [[menu.main]]
+    name = "Non-normative sections"
+    identifier = "500-non-normative"
+    weight = "500"
+    [[menu.main]]
+    name = "Declarative Bundles"
+    identifier = "801-declarative-images"
+    url = "/docs/801-declarative-images/"
+    weight = "801"
+    parent = "500-non-normative"
+    [[menu.main]]
+    name = "Credential Sets"
+    identifier = "802-credential-sets"
+    url = "/docs/802-credential-sets/"
+    weight = "802"
+    parent = "500-non-normative"
+    [[menu.main]]
+    name = "Base Bundles"
+    identifier = "803-base-bundles"
+    url = "/docs/803-base-bundles/"
+    weight = "803"
+    parent = "500-non-normative"
+    [[menu.main]]
+    name = "Repositories"
+    identifier = "804-repositories"
+    url = "/docs/804-repositories/"
+    weight = "804"
+    parent = "500-non-normative"
+    [[menu.main]]
+    name = "Well known custom actions"
+    identifier = "805-well-known-custom-actions"
+    url = "/docs/805-well-known-custom-actions/"
+    weight = "805"
+    parent = "500-non-normative"
+
+  [[menu.main]]
+    name = "Process Documentation"
+    identifier = "600-process"
+    weight = "500"
+    [[menu.main]]
+    name = "Specification Process"
+    identifier = "901-process"
+    url = "/docs/901-process/"
+    weight = "901"
+    parent = "600-process"
