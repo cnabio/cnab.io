@@ -288,6 +288,9 @@ small {
   padding-left: 0;
   padding-right: 0;
   min-height: 5rem;
+  position: relative;
+  z-index: 1000;
+  background: white;
   
   h1 {
     margin: 0;
@@ -668,6 +671,7 @@ body.list.noscroll {
   border-top: 2px solid rgba(0,0,0,0.05);
   position: relative;
   min-height: 3rem;
+  z-index: 1500;
 
   .deislabs {
     width: 5.5rem;
@@ -779,6 +783,53 @@ article.post {
 
     p {
       line-height: 1.85;
+    }
+  }
+}
+
+// CNAB Spec docs pages
+.single .docs {
+  margin-top: -60px !important;
+  border-top: 1px solid $green;
+}
+
+.docs-sidebar {
+  position: relative;
+  z-index: 850;
+
+  ul.docs-menu {
+    position: fixed;
+    margin: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 98px;
+    border-right: 1px solid $green;
+    max-width: 420px;
+    min-width: 300px;
+
+    li {
+      a {
+        padding: 1.75rem 1.75rem;
+        line-height: 1.825;
+        font-size: 1.25rem;
+        font-family: $work;
+        color: $navy;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding-top: 0.5rem;
+      padding-bottom: 1.2rem;
+      
+      li {
+        a {
+          padding: 1.5rem 1.75rem 1.5rem 2.75rem;
+          font-size: 1rem;
+          color: lighten($navy, 5%);
+        }
+      }
     }
   }
 }
