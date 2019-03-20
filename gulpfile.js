@@ -6,7 +6,6 @@ var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   minifycss = require('gulp-clean-css'),
   rename = require('gulp-rename'),
-  notify = require('gulp-notify'),
   cache = require('gulp-cache'),
   imagemin = require('gulp-imagemin'),
   livereload = require('gulp-livereload'),
@@ -30,8 +29,7 @@ gulp.task('styles', function () {
     .pipe(cssnano())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('themes/cnab/static/css/'))
-    .pipe(gulp.dest(destination + '/css'))
-    .pipe(notify({message: 'Styles compiled.'}));
+    .pipe(gulp.dest(destination + '/css'));
 });
 
 
@@ -39,10 +37,8 @@ gulp.task('styles', function () {
 gulp.task('images', function () {
   return streamqueue({objectMode: true},
     gulp.src('themes/cnab/static/img/**/*{.jpg, .png, .gif}')
-      .pipe(cache(imagemin({optimizationLevel: 3, progressive: true, interlaced: true})))
-      .pipe(notify({message: 'Images minifed.'})),
+      .pipe(cache(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))),
     gulp.src('themes/cnab/static/img/**/*')
-      .pipe(notify({message: 'Images moved.'}))
       .pipe(gulp.dest(destination + '/img'))
   )
 });
@@ -82,13 +78,11 @@ gulp.task('clone', gulp.series('clean', 'clonedocs', 'clone-index', 'clonedel'),
 // Copy
 gulp.task('copy', function () {
   return gulp.src('themes/cnab/static/fonts/*')
-    .pipe(gulp.dest(destination + '/fonts'))
-    .pipe(notify({message: 'Fonts moved.'}));
+    .pipe(gulp.dest(destination + '/fonts'));
 });
 gulp.task('copyall', function () {
   return gulp.src('static/**/*')
-    .pipe(gulp.dest('public/'))
-    .pipe(notify({message: 'Copied all.'}));
+    .pipe(gulp.dest('public/'));
 });
 
 
