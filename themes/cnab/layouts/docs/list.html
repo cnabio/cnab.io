@@ -11,7 +11,7 @@
       <article class="post post-view">
         
         <div class="post-content">
-          {{ with .GetPage "/000-index" }}{{.Render}}{{end}}
+          {{ .Site.GetPage "section" "docs" }}
         </div>
         
         <footer class="post-footer">
