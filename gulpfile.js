@@ -63,16 +63,15 @@ gulp.task('clonedocs', function(cb) {
 gulp.task('clone-index', function() {
   return gulp.src('content/docs/000-index.md',)
   .pipe(rename('index.md'))
-  // .pipe(gulp.dest('content/docs'))
+  .pipe(gulp.dest('content/docs'))
 });
 gulp.task('clonedel', function () {
   return del([
     'content/docs/CONTRIBUTING.md',
-    'content/docs/README.md',
-    'content/docs/000-index.md'
-  ], {force: true});
+    'content/docs/README.md'
+  ]);
 });
-gulp.task('clone', gulp.series('clean', 'clonedocs', 'clone-index', 'clonedel'), function() { });
+gulp.task('clone', gulp.series('clean', 'clonedocs', 'clonedel'), function() { });
 
 
 // Copy
