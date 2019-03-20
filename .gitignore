@@ -10,6 +10,8 @@ bower_components/
 static/*
 vendor/
 public/**/*
+content/docs
+content/docs/**/*
 
 # Logs
 logs
