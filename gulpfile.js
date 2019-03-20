@@ -2,7 +2,7 @@ var destination = process.env.GULP_DESTINATION || 'static';
 
 // Load plugins
 var gulp = require('gulp'),
-  sass = require('gulp-ruby-sass'),
+  sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   minifycss = require('gulp-clean-css'),
   rename = require('gulp-rename'),
@@ -16,10 +16,13 @@ var gulp = require('gulp'),
   git = require('gulp-git'),
   streamqueue = require('streamqueue');
 
+  sass.compiler = require('node-sass');
+
 
 // Styles
 gulp.task('styles', function () {
-  return sass('themes/cnab/static/sass/styles.scss', {style: 'compressed'})
+  return gulp.src('themes/cnab/static/sass/styles.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 version'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
