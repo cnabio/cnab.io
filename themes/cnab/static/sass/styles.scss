@@ -835,6 +835,60 @@ article.post {
 }
 
 
+// docs content
+.docs {
+  .post-content {
+    p {
+      margin: 0 0 2rem;
+      line-height: 1.85;
+    }
+
+    ul {
+      margin: 2rem 0;
+    }
+
+    li {
+      line-height: 1.8;
+      font-size: 1.125rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: darken($navy, 5%);
+      @include ripple;
+      font-style: normal;
+      border: none;
+
+      &:before {
+        position: absolute;
+        bottom: 0px;
+        left: 10%;
+        width: 80%;
+        height: 4px;
+        content: "";
+        background-color: lighten($navy, 50%);
+      }
+    }
+
+    code {
+      border: none;
+      background-color: desaturate($yellowl, 20%);
+      font-family: monospace;
+      font-size: 1.125rem;
+      color: desaturate($navy, 10%);
+      font-style: normal;
+      border-radius: 0.25rem;
+    }
+
+    pre {
+      border-radius: 0.5rem;
+      border: none;
+      background-color: desaturate($yellowl, 20%);
+    }
+  }
+}
+
+
 // Media Queries
 // ---------------------------------------
 // mobile
