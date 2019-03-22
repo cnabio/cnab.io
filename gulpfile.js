@@ -55,7 +55,7 @@ gulp.task('clean', function () {
 
 // Clone Docs for Hugo
 gulp.task('clonedocs', function(cb) {
-  git.clone('https://github.com/flynnduism/cnab-spec', {args: './content/docs', quiet: false}, function(err) {
+  git.clone('https://github.com/deislabs/cnab-spec', {args: './content/docs', quiet: false}, function(err) {
     // handle err
     cb(err);
   });
