@@ -25,8 +25,8 @@ both as a tool to install and manage bundles, and author bundles at a low level.
 Porter provides a declarative authoring experience with composable bundles that lets
 you use reuse existing scripts and tools such as Helm, Terraform, Kubernetes, and Azure.
 
-## Docker Apps
-<a href="https://github.com/docker/app" alt="docker"><img align="right" src="/img/docker.png" width="97px" /></a>
+## Docker App
+<a href="https://github.com/docker/app" alt="docker"><img align="right" src="/img/docker.png" width="144px" /></a>
 
 A Docker CLI Plugin to configure, share and install applications:
 
