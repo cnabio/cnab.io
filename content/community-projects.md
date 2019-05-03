@@ -14,10 +14,10 @@ use in your own project.
 
 ## Duffle
 <a href="https://duffle.sh" alt="duffle"><img align="right" src="/img/duffle.svg" width="64px" /></a>
-Duffle is the reference implementation of the CNAB specification. It is best for
-installing and managing existing CNAB bundles. If you are making a new bundle,
-the other community tools have extra features designed to make authoring bundles
-easier.
+
+Duffle is the reference implementation of the CNAB specification. It
+provides a comprehensive mapping of _all_ features of the specification, serving
+both as a tool to install and manage bundles, and author bundles at a low level.
 
 ## Porter
 <a href="https://porter.sh" alt="porter"><img align="right" src="/img/porter.png" width="64px" /></a>
