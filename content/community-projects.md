@@ -14,14 +14,26 @@ use in your own project.
 
 ## Duffle
 <a href="https://duffle.sh" alt="duffle"><img align="right" src="/img/duffle.svg" width="64px" /></a>
-Duffle is a command line tool that allows you to install and manage CNAB bundles.
+
+Duffle is the reference implementation of the CNAB specification. It
+provides a comprehensive mapping of _all_ features of the specification, serving
+both as a tool to install and manage bundles, and author bundles at a low level.
 
 ## Porter
 <a href="https://porter.sh" alt="porter"><img align="right" src="/img/porter.png" width="64px" /></a>
 
-Porter improves the bundle authoring experience by adding bundle dependencies and 
-a declarative experience that understands how to translate CNAB into existing tools
-such as Helm, Azure, etc.
+Porter provides a declarative authoring experience with composable bundles that lets
+you use reuse existing scripts and tools such as Helm, Terraform, Kubernetes, and Azure.
+
+## Docker App
+<a href="https://github.com/docker/app" alt="docker"><img align="right" src="/img/docker.png" width="144px" /></a>
+
+A Docker CLI Plugin to configure, share and install applications:
+
+* Extend Compose files with metadata and parameters.
+* Re-use same application across multiple environments.
+* Multi-orchestrator installation.
+* Push/Pull/Promotion/Signing supported for application, with same workflow as images.
 
 ---
 
