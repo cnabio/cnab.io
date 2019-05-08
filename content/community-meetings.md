@@ -9,7 +9,7 @@ Each week the CNAB community discuss and demo ongoing work around the CNAB spec 
 
 ## CNAB Community Meeting
 
-* Meeting time: Weekly Wednesday 9:00 AM - 10:00 AM US Pacific Time
+* Meeting time: Every other Wednesday 9:00 AM - 10:00 AM US Pacific Time (See dates in [Hack MD document](https://hackmd.io/s/SyGcBcwQ4#))
 * Zoom Link: https://zoom.us/j/653255416
 
 
