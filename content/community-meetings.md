@@ -1,21 +1,28 @@
 ---
 title: Community Meetings
-description: Community weekly meetings take place each Wednesday at 9:00am US Pacific
+description: Community meetings take place each Wednesday at 9:00am US Pacific Time
 ---
 
-Each week the CNAB community discuss and demo ongoing work around the CNAB spec and related tools. All are welcome to participate and contribute!
+Each week the CNAB community meets to discuss and demo ongoing work around the specification and related tools. All are welcome to participate and contribute!
 
 ---
 
-## CNAB Community Meeting
+## General Community Meeting
 
-* Meeting time: Every other Wednesday 9:00 AM - 10:00 AM US Pacific Time (See dates in [Hack MD document](https://hackmd.io/s/SyGcBcwQ4#))
-* Zoom Link: https://zoom.us/j/653255416
+* Meeting Time: Every other Wednesday 9:00 AM - 10:00 AM US Pacific Time. See exact dates in our [Google Calendar](https://calendar.google.com/calendar/r?cid=Nzg5aTBsMzIzaGZmNzc1b3VwZTZxNDVmbXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&pli=1).
+* [Join Meeting](https://zoom.us/j/653255416)
+* [Agenda and Notes](https://hackmd.io/s/SyGcBcwQ4#)
 
+## Registry and Security Community Meeting
+
+* Meeting Time: Every other Wednesday 9:00 AM - 10:00 AM US Pacific Time. See exact dates in our [Google Calendar](https://calendar.google.com/calendar/r?cid=Nzg5aTBsMzIzaGZmNzc1b3VwZTZxNDVmbXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&pli=1).
+* [Join Meeting](https://zoom.us/j/653255416)
+* [Agenda and Notes](https://hackmd.io/s/SyGcBcwQ4#)
 
 ### Agenda & Action Items
 
-Agenda notes and action items for community meetings are tracked via a collaborative [Hack MD document](https://hackmd.io/s/SyGcBcwQ4#).
+Agenda notes and action items for all community meetings are tracked in a collaborative [document](https://hackmd.io/s/SyGcBcwQ4#) that all participants
+may edit.
 
 ### Previous Meetings
 
