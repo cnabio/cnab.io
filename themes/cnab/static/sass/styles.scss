@@ -288,6 +288,9 @@ small {
   padding-left: 0;
   padding-right: 0;
   min-height: 5rem;
+  position: relative;
+  z-index: 1000;
+  background: white;
   
   h1 {
     margin: 0;
@@ -668,6 +671,7 @@ body.list.noscroll {
   border-top: 2px solid rgba(0,0,0,0.05);
   position: relative;
   min-height: 3rem;
+  z-index: 1500;
 
   .deislabs {
     width: 5.5rem;
@@ -779,6 +783,107 @@ article.post {
 
     p {
       line-height: 1.85;
+    }
+  }
+}
+
+// CNAB Spec docs pages
+.single .docs {
+  margin-top: -60px !important;
+  border-top: 1px solid $green;
+}
+
+.docs-sidebar {
+  position: relative;
+  z-index: 850;
+
+  ul.docs-menu {
+    position: fixed;
+    margin: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 98px;
+    border-right: 1px solid $green;
+    max-width: 420px;
+    min-width: 300px;
+
+    li {
+      a {
+        padding: 1.75rem 1.75rem;
+        line-height: 1.825;
+        font-size: 1.25rem;
+        font-family: $work;
+        color: $navy;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding-top: 0.5rem;
+      padding-bottom: 1.2rem;
+      
+      li {
+        a {
+          padding: 1.5rem 1.75rem 1.5rem 2.75rem;
+          font-size: 1rem;
+          color: lighten($navy, 5%);
+        }
+      }
+    }
+  }
+}
+
+
+// docs content
+.docs {
+  .post-content {
+    p {
+      margin: 0 0 2rem;
+      line-height: 1.85;
+    }
+
+    ul {
+      margin: 2rem 0;
+    }
+
+    li {
+      line-height: 1.8;
+      font-size: 1.125rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: darken($navy, 5%);
+      @include ripple;
+      font-style: normal;
+      border: none;
+
+      &:before {
+        position: absolute;
+        bottom: 0px;
+        left: 10%;
+        width: 80%;
+        height: 4px;
+        content: "";
+        background-color: lighten($navy, 50%);
+      }
+    }
+
+    code {
+      border: none;
+      background-color: desaturate($yellowl, 20%);
+      font-family: monospace;
+      font-size: 1.125rem;
+      color: desaturate($navy, 10%);
+      font-style: normal;
+      border-radius: 0.25rem;
+    }
+
+    pre {
+      border-radius: 0.5rem;
+      border: none;
+      background-color: desaturate($yellowl, 20%);
     }
   }
 }

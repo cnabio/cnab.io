@@ -1,0 +1,63 @@
+{{ partial "header.html" . }}
+
+<div class="docs docs-wrapper height-full">
+  <div class="row row-full">
+    
+    <div class="small-12 large-3 sidebar sidebar docs-sidebar height-full columns">
+      {{ partial "docs-menu.html" . -}}
+    </div>
+
+    <div class="small-12 large-9 main docs-main height-full columns">
+      <article class="post post-view">
+        
+        <div class="post-content">{{ .Content }}</div>
+        
+        <footer class="post-footer">
+          {{ if .Params.tags }}
+          <ul class="post-tags">
+            {{ range .Params.tags }}
+            <li><a href="{{.Site.BaseURL}}/tags/{{ . | urlize }}/">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </footer>
+        <!-- Comments system area start -->
+        {{ if not (eq .Params.comments false) }}
+        {{ if .Site.DisqusShortname }}
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_shortname = '{{ .Site.DisqusShortname }}';
+          (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <!-- Comments system area end -->
+        {{ end }}
+        {{ end }}
+      </article>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  
+  var affixMenu = document.querySelector(".sidebar");
+
+  window.onscroll = function() {
+    if (window.pageYOffset > 140) {
+      affixMenu.classList.add("fixed");
+    } else {
+      affixMenu.classList.remove("fixed");
+    };
+  }
+</script>
+
+{{ partial "footer.html" . }}

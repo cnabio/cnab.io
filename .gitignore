@@ -9,6 +9,8 @@ node_modules/
 bower_components/
 vendor/
 public/**/*
+content/docs
+content/docs/**/*
 
 # Logs
 logs

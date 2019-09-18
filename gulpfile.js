@@ -2,23 +2,26 @@ var destination = process.env.GULP_DESTINATION || 'static';
 
 // Load plugins
 var gulp = require('gulp'),
-  sass = require('gulp-ruby-sass'),
+  sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   minifycss = require('gulp-clean-css'),
   rename = require('gulp-rename'),
-  notify = require('gulp-notify'),
   cache = require('gulp-cache'),
   imagemin = require('gulp-imagemin'),
   livereload = require('gulp-livereload'),
   del = require('del'),
   cssnano = require('gulp-cssnano'),
   sourcemaps = require('gulp-sourcemaps'),
+  git = require('gulp-git'),
   streamqueue = require('streamqueue');
+
+  sass.compiler = require('node-sass');
 
 
 // Styles
 gulp.task('styles', function () {
-  return sass('themes/cnab/static/sass/styles.scss', {style: 'compressed'})
+  return gulp.src('themes/cnab/static/sass/styles.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 version'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
@@ -26,8 +29,7 @@ gulp.task('styles', function () {
     .pipe(cssnano())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('themes/cnab/static/css/'))
-    .pipe(gulp.dest(destination + '/css'))
-    .pipe(notify({message: 'Styles compiled.'}));
+    .pipe(gulp.dest(destination + '/css'));
 });
 
 
@@ -35,38 +37,56 @@ gulp.task('styles', function () {
 gulp.task('images', function () {
   return streamqueue({objectMode: true},
     gulp.src('themes/cnab/static/img/**/*{.jpg, .png, .gif}')
-      .pipe(cache(imagemin({optimizationLevel: 3, progressive: true, interlaced: true})))
-      .pipe(notify({message: 'Images minifed.'})),
+      .pipe(cache(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))),
     gulp.src('themes/cnab/static/img/**/*')
-      .pipe(notify({message: 'Images moved.'}))
       .pipe(gulp.dest(destination + '/img'))
   )
-});
-
-
-// Copy
-gulp.task('copy', function () {
-  return gulp.src('themes/cnab/static/fonts/*')
-    .pipe(gulp.dest(destination + '/fonts'))
-    .pipe(notify({message: 'Fonts moved.'}));
-});
-gulp.task('copyall', function () {
-  return gulp.src('static/**/*')
-    .pipe(gulp.dest('public/'))
-    .pipe(notify({message: 'Copied all.'}));
 });
 
 
 // Clean
 gulp.task('clean', function () {
   return del([
-    destination + '/**/*'
+    'public',
+    'content/docs/'
   ], {force: true});
 });
 
 
+// Clone Docs for Hugo
+gulp.task('clonedocs', function(cb) {
+  git.clone('https://github.com/deislabs/cnab-spec', {args: './content/docs', quiet: false}, function(err) {
+    // handle err
+    cb(err);
+  });
+});
+gulp.task('clone-index', function() {
+  return gulp.src('content/docs/000-index.md',)
+  .pipe(rename('index.md'))
+  .pipe(gulp.dest('content/docs'))
+});
+gulp.task('clonedel', function () {
+  return del([
+    'content/docs/CONTRIBUTING.md',
+    'content/docs/README.md'
+  ]);
+});
+gulp.task('clone', gulp.series('clean', 'clonedocs', 'clonedel'), function() { });
+
+
+// Copy
+gulp.task('copy', function () {
+  return gulp.src('themes/cnab/static/fonts/*')
+    .pipe(gulp.dest(destination + '/fonts'));
+});
+gulp.task('copyall', function () {
+  return gulp.src('static/**/*')
+    .pipe(gulp.dest('public/'));
+});
+
+
 // 'gulp' default task to build the site assets
-gulp.task('default', gulp.series('styles', 'images', 'copy'), function() { });
+gulp.task('default', gulp.series('clone', 'styles', 'images', 'copy'), function() { });
 
 // 'gulp watch' to watch for changes during dev
 gulp.task('watch', function () {
