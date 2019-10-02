@@ -33,8 +33,8 @@ Recordings of meetings can be found in [this YouTube playlist](https://www.youtu
 ## Communications
 
 * [GitHub](https://github.com/deislabs/cnab-spec)
-* Mailing List [Subscription](https://groups.google.com/a/opencontainers.org/forum/#!forum/dev)
-* Mailing List Email: [dev@opencontainers.org](mailto:dev@opencontainers.org)
+* Mailing List [Subscription](https://lists.jointdevelopment.org/g/CNAB-Main/)
+* Mailing List Email: [CNAB-Main@lists.jointdevelopment.org](mailto:CNAB-Main@lists.jointdevelopment.org)
 * [Slack channel](https://cloud-native.slack.com/messages/CEX1W7WMD/)  (via CNCF) 
 
 For invites to the #cnab Slack channel, visit [slack.cncf.io](https://slack.cncf.io)
