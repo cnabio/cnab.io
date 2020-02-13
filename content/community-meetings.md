@@ -32,7 +32,7 @@ Recordings of meetings can be found in [this YouTube playlist](https://www.youtu
 
 ## Communications
 
-* [GitHub](https://github.com/deislabs/cnab-spec)
+* [GitHub](https://github.com/cnabio/cnab-spec)
 * Mailing List [Subscription](https://lists.jointdevelopment.org/g/CNAB-Main/)
 * Mailing List Email: [CNAB-Main@lists.jointdevelopment.org](mailto:CNAB-Main@lists.jointdevelopment.org)
 * [Slack channel](https://cloud-native.slack.com/messages/CEX1W7WMD/)  (via CNCF) 
