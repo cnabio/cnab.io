@@ -53,7 +53,7 @@ _We are currently working on extracting a Go SDK out of the [Duffle codebase][du
 ---
 
 Have you written an SDK or tool that works with the CNAB spec? Submit a PR
-to <https://github.com/deislabs/cnab.io> and we will list it here!
+to <https://github.com/cnabio/cnab.io> and we will list it here!
 
 [cnab-community]: https://github.com/deislabs/cnab-community
 [duffle-pkg]: https://github.com/deislabs/duffle/tree/master/pkg
