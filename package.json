@@ -22,6 +22,9 @@
     "gulp-sourcemaps": "^2.6.4",
     "streamqueue": "^1.1.2"
   },
+  "resolutions": {
+    "js-yaml": "^3.13.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

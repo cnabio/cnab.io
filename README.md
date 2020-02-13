@@ -16,11 +16,12 @@ cnab.io is static site. The landing page content can be edited at `themes/cnab/l
 
 # Development
 
-Install the dependencies - first [install Hugo](https://gohugo.io/getting-started/installing/), and then the packages:
+Install the dependencies - first install [Hugo](https://gohugo.io/getting-started/installing/)
+and [Yarn](https://classic.yarnpkg.com/en/docs/install) - and then the packages:
 
 ```
-npm install gulp-cli -g
-npm install
+yarn global add gulp-cli
+yarn install
 gulp && hugo serve
 ```
 
