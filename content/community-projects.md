@@ -45,7 +45,7 @@ Feel free to contribute to that SDK, or start your own.
 _We are currently working on extracting a Go SDK out of the [Duffle codebase][duffle-pkg]._
 
 ## .NET
-* [CNAB.NET](https://github.com/deislabs/cnab-netstandard)
+* [CNAB.NET](https://github.com/cnabio/cnab-netstandard)
 
 ## Python
 * [CNAB](https://github.com/garethr/pycnab)
@@ -55,5 +55,5 @@ _We are currently working on extracting a Go SDK out of the [Duffle codebase][du
 Have you written an SDK or tool that works with the CNAB spec? Submit a PR
 to <https://github.com/cnabio/cnab.io> and we will list it here!
 
-[cnab-community]: https://github.com/deislabs/cnab-community
-[duffle-pkg]: https://github.com/deislabs/duffle/tree/master/pkg
+[cnab-community]: https://github.com/cnabio/community
+[duffle-pkg]: https://github.com/cnabio/duffle/tree/master/pkg

@@ -1,6 +1,6 @@
 ![Theme Screenshot](https://raw.githubusercontent.com/cnabio/cnab.io/master/themes/cnab/img/screenshot.png?token=AAp4ctyXT6Xuaer1Vm8SXT0HscNhS5WGks5cBvT9wA%3D%3D)
 
-A simple website for the [CNAB spec](https://github.com/deislabs/cnab-spec).
+A simple website for the [CNAB spec](https://github.com/cnabio/cnab-spec).
 
 # Editing Content
 
