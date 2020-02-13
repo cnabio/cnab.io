@@ -1,0 +1,10 @@
+# Redirect rules for Netlify
+# Although splats are supported, e.g. /* /new/path/:splat, regex isn't yet
+
+# Serve schema files located in the cnabio/cnab-spec repository
+/v1/bundle.schema.json https://raw.githubusercontent.com/cnabio/cnab-spec/master/schema/bundle.schema.json
+/v1/claim.schema.json https://raw.githubusercontent.com/cnabio/cnab-spec/master/schema/claim.schema.json
+/v1/definitions.schema.json https://raw.githubusercontent.com/cnabio/cnab-spec/master/schema/definitions.schema.json
+/v1/dependenciesschema.json https://raw.githubusercontent.com/cnabio/cnab-spec/master/schema/dependenciesschema.json
+/v1/relocation-mapping.schema.json https://raw.githubusercontent.com/cnabio/cnab-spec/master/schema/relocation-mapping.schema.json
+/v1/status.schema.json https://raw.githubusercontent.com/cnabio/cnab-spec/master/schema/status.schema.json
