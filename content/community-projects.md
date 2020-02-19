@@ -42,7 +42,7 @@ Just because you see one already listed for your language, don't let that hold y
 Feel free to contribute to that SDK, or start your own.
 
 ## Go
-_We are currently working on extracting a Go SDK out of the [Duffle codebase][duffle-pkg]._
+* [cnab-go](https://github.com/cnabio/cnab-go)
 
 ## .NET
 * [CNAB.NET](https://github.com/cnabio/cnab-netstandard)
