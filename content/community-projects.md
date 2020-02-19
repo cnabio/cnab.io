@@ -45,7 +45,7 @@ Feel free to contribute to that SDK, or start your own.
 * [cnab-go](https://github.com/cnabio/cnab-go)
 
 ## .NET
-* [CNAB.NET](https://github.com/cnabio/cnab-netstandard)
+* [CNAB.NET](https://github.com/deislabs/cnab-netstandard)
 
 ## Python
 * [CNAB](https://github.com/garethr/pycnab)
