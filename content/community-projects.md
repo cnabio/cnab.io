@@ -50,6 +50,9 @@ Feel free to contribute to that SDK, or start your own.
 ## Python
 * [CNAB](https://github.com/garethr/pycnab)
 
+## Rust
+* [cnab-rs](https://github.com/cnabio/cnab-rs)
+
 ---
 
 Have you written an SDK or tool that works with the CNAB spec? Submit a PR
