@@ -669,87 +669,23 @@ body.list.noscroll {
   position: relative;
   min-height: 3rem;
 
-  .deislabs {
-    width: 5.5rem;
-    height: 7.3rem;
-    display: inline-block;
-    position: absolute;
-    top: -4rem;
-
-    span {
-      background: url(../img/deislabs.svg) no-repeat center bottom;
-      width: 100%;
-      height: 3rem;
-      background-size: contain;
-      display: inline-block;
-      text-indent: -999em;
-      position: absolute;
-      bottom: 0;
-      @include transition;
-    }
-
-    em {
-      width: 3rem;
-      height: 3rem;
-      display: inline-block;
-      position: absolute;
-      background-blend-mode: multiply;
-      mix-blend-mode: multiply;
-      content: " ";
-      @include transition(all, 0.3s, ease-in-out);
-      
-      &.dl-tr {
-        background: url(../img/deislabs-tr.svg) no-repeat 50% 50%;
-        background-size: contain;
-        left: 0;
-        top: 0;
-      }
-
-      &.dl-sq {
-        background: url(../img/deislabs-sq.svg) no-repeat 50% 50%;
-        background-size: contain;
-        right: 0;
-        bottom: 1.8rem;
-      }
-
-      &.dl-ci {
-        background: url(../img/deislabs-ci.svg) no-repeat 50% 50%;
-        background-size: contain;
-        left: 0;
-        bottom: 1.8rem;
-      }
-    }
-
-    a {
-      display: inline-block;
-      width: 5.5rem;
-      height: 7.3rem;
-
-      &:hover {
-        em {
-          &.dl-tr {
-            left: 2.2rem;
-            top: 2.5rem;
-          }
-          &.dl-sq {
-            right: 2.5rem;
-          }
-          &.dl-ci {
-            bottom: 4.2rem;
-          }
-        }
-      }
-    }
+  ul {
+    margin: 2rem 0;
+    padding: 0;
   }
 
-  p {
-    margin: 2rem 0;
-    padding: 0 0 0 6rem;
+  img.logo {
+    max-width: 1.25rem;
+    margin: 0;
   }
 
   .fa {
     font-size: $base-lg;
     color: #333;
+  }
+
+  p {
+    margin: 1.825rem 0 0;
   }
 }
 
