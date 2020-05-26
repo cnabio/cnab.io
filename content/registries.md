@@ -22,6 +22,7 @@ using a CNAB tool that uses the [cnab-to-oci] library.
 | Amazon Elastic Container Registry (ECR) | No |
 | **Google Cloud Registry (GCR)** | **Yes** |  
 | GitHub Packages | No |
+| **Harbor 2** | **Yes** |
 | Nexus | No |
 | Quay | No |
  
