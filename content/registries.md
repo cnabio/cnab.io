@@ -12,7 +12,6 @@ Registries that are [OCI compliant][oci-spec] should work with CNAB just fine. C
 have additional requirements beyond that. Each registry below has been verified
 using a CNAB tool that uses the [cnab-to-oci] library.
 
-
 | Registry | Compatible |
 | -------- | --------------- |
 | **Azure Container Registry (ACR)** | **Yes** |
@@ -20,14 +19,15 @@ using a CNAB tool that uses the [cnab-to-oci] library.
 | **Docker Hub** | **Yes** |
 | **DigitalOcean Container Registry** | **Yes** |
 | Amazon Elastic Container Registry (ECR) | No |
-| **Google Cloud Registry (GCR)** | **Yes** |  
+| **Google Cloud Registry (GCR)** | **Yes** | 
+| **GitHub Container Registry (GHCR)** | **Yes** | 
 | GitHub Packages | No |
 | **Harbor 2** | **Yes** |
 | Nexus | No |
 | Quay | No |
  
  _If you have tried out a registry and have an update for us, [please
- let us know](https://github.com/cnabio/cnab.io/issues/new)_ !
+ let us know](https://github.com/cnabio/cnab.io/issues/new)_!
  
  [cnab-to-oci]: https://github.com/cnabio/cnab-to-oci
  [oci-spec]: https://github.com/opencontainers/distribution-spec/blob/master/spec.md
