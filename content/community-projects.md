@@ -59,4 +59,4 @@ Have you written an SDK or tool that works with the CNAB spec? Submit a PR
 to <https://github.com/cnabio/cnab.io> and we will list it here!
 
 [cnab-community]: https://github.com/cnabio/community
-[duffle-pkg]: https://github.com/cnabio/duffle/tree/master/pkg
+[duffle-pkg]: https://github.com/cnabio/duffle/tree/main/pkg

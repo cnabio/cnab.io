@@ -2,7 +2,7 @@
 # Although splats are supported, e.g. /* /new/path/:splat, regex isn't yet
 
 # Serve latest schema files located in the cnabio/cnab-spec repository
-/v1/* https://raw.githubusercontent.com/cnabio/cnab-spec/master/schema/:splat
+/v1/* https://raw.githubusercontent.com/cnabio/cnab-spec/main/schema/:splat
 
 # Serve versioned schema files from the CDN source
 /schema/* https://cdn.cnab.io/schema/:splat
