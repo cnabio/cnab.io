@@ -18,7 +18,7 @@ using a CNAB tool that uses the [cnab-to-oci] library.
 | Artifactory | No |
 | **Docker Hub** | **Yes** |
 | **DigitalOcean Container Registry** | **Yes** |
-| Amazon Elastic Container Registry (ECR) | No |
+| **Amazon Elastic Container Registry (ECR)** | [Yes*](#notes) |
 | **Google Artifact Registry** | **Yes** |
 | Google Cloud Registry (GCR) | No | 
 | **GitHub Container Registry (GHCR)** | **Yes** | 
@@ -27,9 +27,12 @@ using a CNAB tool that uses the [cnab-to-oci] library.
 | Nexus | No |
 | Quay | No |
  
- _If you have tried out a registry and have an update for us, [please
- let us know](https://github.com/cnabio/cnab.io/issues/new)_!
+ If you have tried out a registry and have an update for us, [please
+ let us know](https://github.com/cnabio/cnab.io/issues/new)!
  
+##### Notes
+* Amazon Elastic Container Registry (ECR) requires that you create the repository for the invocation image and the bundle before pushing.
+
  [cnab-to-oci]: https://github.com/cnabio/cnab-to-oci
  [oci-spec]: https://github.com/opencontainers/distribution-spec/blob/master/spec.md
  
