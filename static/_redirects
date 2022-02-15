@@ -6,3 +6,7 @@
 
 # Serve versioned schema files from the CDN source
 /schema/* https://cdn.cnab.io/schema/:splat
+
+# shortlinks
+/zoom https://us02web.zoom.us/j/89658023321?pwd=UW9NY0NSM015ZXE3bHVrL2Rqa1lzdz09
+/agenda https://hackmd.io/s/SyGcBcwQ4#
