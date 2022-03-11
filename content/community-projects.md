@@ -12,21 +12,27 @@ use in your own project.
 
 # Tools
 
+## Porter
+<a href="https://porter.sh" alt="porter"><img align="right" src="/img/porter.png" width="64px" /></a>
+
+Package your application artifact, client tools, configuration and deployment logic together as a versioned bundle that you can distribute, and then install with a single command.
+
+Porter provides a declarative authoring experience with composable bundles that lets
+you use reuse your existing scripts and tools such as Helm, Terraform, Kubernetes, and Azure.
+
 ## Duffle
 <a href="https://duffle.sh" alt="duffle"><img align="right" src="/img/duffle.svg" width="64px" /></a>
+
+**Duffle has been archived and is no longer maintained**
 
 Duffle is the reference implementation of the CNAB specification. It
 provides a comprehensive mapping of _all_ features of the specification, serving
 both as a tool to install and manage bundles, and author bundles at a low level.
 
-## Porter
-<a href="https://porter.sh" alt="porter"><img align="right" src="/img/porter.png" width="64px" /></a>
-
-Porter provides a declarative authoring experience with composable bundles that lets
-you use reuse existing scripts and tools such as Helm, Terraform, Kubernetes, and Azure.
-
 ## Docker App
 <a href="https://github.com/docker/app" alt="docker"><img align="right" src="/img/docker.png" width="144px" /></a>
+
+**Docker App has been archived and is no longer maintained**
 
 A Docker CLI Plugin to configure, share and install applications:
 
