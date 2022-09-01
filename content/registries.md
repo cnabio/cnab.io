@@ -15,7 +15,7 @@ using a CNAB tool that uses the [cnab-to-oci] library.
 | Registry | Compatible |
 | -------- | --------------- |
 | **Azure Container Registry (ACR)** | **Yes** |
-| Artifactory | No |
+| Artifactory | **Yes** |
 | **Docker Hub** | **Yes** |
 | **DigitalOcean Container Registry** | **Yes** |
 | **Amazon Elastic Container Registry (ECR)** | [Yes*](#notes) |
